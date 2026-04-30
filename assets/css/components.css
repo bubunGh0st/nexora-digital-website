@@ -1,0 +1,312 @@
+/* All Components CSS Goes Here */
+
+/*======================
+  CTA BUTTON PRIMARY
+========================*/
+.nx-btn-primary {
+  padding: 10px 18px;
+  border-radius: var(--radius-md);
+  background: var(--gradient-primary);
+  font-weight: 500;
+  transition: var(--transition);
+  display: inline-block;
+}
+
+.nx-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(47,128,237,0.4);
+}
+
+/*======================
+  CTA BUTTON SECONDARY
+========================*/
+.nx-btn-secondary {
+  padding: 10px 18px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  transition: var(--transition);
+}
+
+.nx-btn-secondary:hover {
+  transform: translateY(-2px);
+  background: var(--bg-soft);
+  box-shadow: 0 0 20px var(--bg-soft);
+}
+
+/*======================
+  HEADING DIVIDER
+========================*/
+/* Divider base */
+.nx-divider {
+  position: relative;
+  width: 140px;
+  height: 2px;
+  margin: 20px auto;
+  background: var(--bg-soft);
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+/* Gradient overlay (static glow) */
+.nx-divider::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--primary),
+    var(--secondary),
+    transparent
+  );
+  opacity: 0.3;
+}
+
+.nx-divider::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: var(--secondary);
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 8px var(--secondary);
+}
+
+/* Moving pulse */
+.nx-pulse {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 40px;
+  height: 4px;
+  transform: translateY(-50%);
+  border-radius: 10px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--secondary),
+    transparent
+  );
+
+  filter: blur(2px);
+  animation: nx-flow 2.5s ease-in-out infinite;
+}
+
+/* Animation */
+@keyframes nx-flow {
+  0% {
+    transform: translateY(-50%) translateX(-40px);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-50%) translateX(100px);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-50%) translateX(160px);
+    opacity: 0;
+  }
+}
+
+/*======================
+  TESTIMONIALS
+========================*/
+/* Card Breathing Space */
+.nx-testimonials .swiper {
+  padding: 15px 15px;
+}
+
+/* Card */
+.nx-testimonial-card {
+  background: var(--bg-soft);
+  padding: 30px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  height: 100%;
+  transition: 
+    transform var(--transition),
+    box-shadow var(--transition),
+    border-color var(--transition);
+  position: relative;
+}
+
+.nx-testimonial-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--gradient-primary);
+  opacity: 0;
+  transition: var(--transition);
+  z-index: -1;
+  filter: blur(40px);
+}
+
+.nx-testimonial-card:hover::before {
+  opacity: 0.2;
+}
+
+.nx-testimonial-card:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 
+    0 20px 50px rgba(0, 0, 0, 0.5),
+    0 0 20px rgba(86, 204, 242, 0.25);
+  border-color: var(--border-blue);
+}
+
+/* Text */
+.nx-testimonial-text {
+  margin-bottom: 20px;
+}
+
+/* User */
+.nx-testimonial-user {
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.nx-testimonial-user img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.nx-testimonial-user h4 {
+  font-size: 16px;
+  margin: 0;
+}
+
+.nx-testimonial-user span {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* Rating */
+.nx-testimonial-rating {
+  color: #FFD700;
+  font-size: var(--fs-small);
+}
+
+/* Navigation */
+.nx-testimonial-nav {
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.nx-testimonial-prev,
+.nx-testimonial-next {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: var(--bg);
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 1px solid var(--border);
+  transition: var(--transition);
+}
+
+.nx-testimonial-prev:hover,
+.nx-testimonial-next:hover {
+  background: var(--primary);
+  color: var(--text);
+}
+
+/*======================
+  CTA SECTION
+========================*/
+/* CTA Base */
+.nx-cta {
+  position: relative;
+  overflow: hidden;
+}
+
+/* CTA Box */
+.nx-cta-box {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  margin: auto;
+  padding: 40px;
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xlg);
+  backdrop-filter: blur(10px);
+}
+
+.nx-cta-box h2 {
+  margin-bottom: 15px;
+}
+
+.nx-cta-box p {
+  margin-bottom: 25px;
+}
+
+/* CTA Section Button */
+.nx-cta-buttons {
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+/* CTA Section Small Note */
+.nx-cta-note {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* CTA Section Glow Blob Effect */
+.nx-cta-glow {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: var(--gradient-primary);
+  filter: blur(100px);
+  opacity: 0.5;
+  z-index: 1;
+  animation: floatGlow 8s ease-in-out infinite;
+}
+
+/* Positions */
+.nx-glow-1 {
+  top: -50px;
+  left: -50px;
+  animation: floatGlow1 10s ease-in-out infinite;
+}
+
+.nx-glow-2 {
+  bottom: -50px;
+  right: -50px;
+  animation: floatGlow2 12s ease-in-out infinite;
+}
+
+/* Floating Glow */
+@keyframes floatGlow1 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(60px, 30px) scale(1.1);
+  }
+}
+
+@keyframes floatGlow2 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-50px, -40px) scale(1.1);
+  }
+}

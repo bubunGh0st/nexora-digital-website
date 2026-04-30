@@ -1,0 +1,121 @@
+/* All Responsive CSS Goes Here */
+
+/* FULLSCREEN MOBILE MENU */
+@media (max-width: 992px) {
+
+  /*============
+      NAVBAR 
+  ==============*/
+  .nx-nav-menu {
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background: var(--bg);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+    z-index: 998;
+  }
+
+  .nx-nav-menu.active {
+    right: 0;
+  }
+
+  .nx-nav-menu ul {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .nx-nav-menu a {
+    font-size: 22px;
+  }
+
+  /* Show Hamburger */
+  .nx-menu-toggle {
+    display: flex;
+  }
+
+  /* CTA mobile version */
+  .nx-nav-menu .nx-btn-primary {
+    display: block;
+    margin-top: 30px;
+    padding: 14px 24px;
+    font-size: 16px;
+  }
+
+  /* Hide desktop CTA */
+  .nx-nav-right .nx-btn-primary {
+    display: none;
+  }
+
+  /*======================
+      HERO SECTION
+  ========================*/
+   .nx-hero {
+    text-align: center;
+  }
+
+  .nx-hero-cta {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .nx-hero-visual {
+    margin-top: 40px;
+  }
+
+  /*======================
+      ABOUT SECTION
+  ========================*/
+  .nx-about {
+    text-align: center;
+  }
+
+  .nx-about-item {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .nx-about-stats {
+    margin-top: 40px;
+  }
+
+  /*======================
+      PORTFOLIO SECTION
+  ========================*/
+  .nx-portfolio-overlay {
+    opacity: 1;
+  }
+
+  /*======================
+      CTA SECTION
+  ========================*/
+  .nx-cta-box {
+    padding: 30px;
+  }
+
+  .nx-cta-glow {
+    width: 240px;
+    height: 240px;
+  }
+  
+}
+
+@media (max-width: 768px) {
+  .nx-cta-box {
+    padding: 25px;
+  }
+
+  .nx-cta-glow {
+    width: 200px;
+    height: 200px;
+    opacity: 0.25;
+  }
+}

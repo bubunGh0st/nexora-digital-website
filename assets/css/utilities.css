@@ -1,0 +1,85 @@
+/* All Utilities CSS Goes Here */
+
+.text-center { text-align: center; }
+.mt-2 { margin-top: 16px; }
+.mb-3 { margin-bottom: 24px; }
+.d-flex { display: flex; }
+
+/* SECTION BACKGROUNDS */
+.nx-section-dark {
+  background: var(--bg);
+}
+
+.nx-section-light {
+  background: var(--bg-light);
+}
+
+.nx-section-soft {
+  background: var(--bg-soft);
+}
+
+/* SECTION SPACING */
+.nx-section {
+  padding: var(--section-padding-md) 0;
+}
+
+.nx-section-sm {
+  padding: var(--section-padding-sm) 0;
+}
+
+.nx-section-lg {
+  padding: var(--section-padding-lg) 0;
+}
+
+/* SECTION HEADER */
+.nx-section-header {
+	max-width: 600px;
+	margin: 0 auto 60px;
+}
+
+.nx-section-header h2 {
+	margin-bottom: 15px;
+}
+
+.nx-section-header p {
+	max-width: 600px;
+ 	margin: 0 auto 40px;
+}
+
+/* WHATSAAP FLOATING BUTTON */
+.nx-whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 55px;
+  height: 55px;
+  background: #25D366;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  z-index: 999;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  transition: 0.3s ease;
+}
+
+.nx-whatsapp-btn:hover {
+  transform: scale(1.1);
+}
+
+@keyframes whatsappPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+.nx-whatsapp-btn {
+  animation: whatsappPulse 2s infinite;
+}

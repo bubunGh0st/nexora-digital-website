@@ -1,0 +1,291 @@
+/* All Sections CSS Goes Here */
+
+/*======================
+	HERO SECTION
+========================*/
+.nx-hero {
+	min-height: 100vh;
+	align-items: center;
+	background: radial-gradient(circle at 20% 20%, #0f2a44, var(--bg-dark));
+	padding-top: 100px;
+}
+
+/* Content */
+.nx-hero-content h1 {
+	font-weight: 700;
+	color: var(--text-light);
+	margin-bottom: 20px;
+	}
+
+.nx-hero-content p {
+	font-size: 18px;
+	margin-bottom: 30px;
+	max-width: 500px;
+}
+
+/* CTA */
+.nx-hero-cta {
+ 	gap: 15px;
+}
+
+/* Visual */
+.nx-hero-visual {
+	position: relative;
+	width: 100%;
+	height: 400px;
+}
+
+#networkCanvas {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+/*======================
+	SERVICES SECTION
+========================*/
+/* Card */
+.nx-service-card {
+	display: block;
+	background: var(--bg-glass);
+	border: 1px solid var(--bg-soft);
+	padding: 30px;
+	border-radius: var(--radius-lg);
+	transition: var(--transition);
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+/* Gradient border layer */
+.nx-service-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, transparent, var(--border-blue), transparent);
+  -webkit-mask: 
+    linear-gradient(#000 0 0) content-box, 
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: var(--transition-slow);
+}
+
+/* Activate on hover */
+.nx-service-card:hover::before {
+  opacity: 1;
+}
+
+/* Hover effect */
+.nx-service-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--border-blue);
+  box-shadow: var(--shadow-soft);
+}
+
+.nx-service-card:active {
+  transform: scale(0.98);
+}
+
+/* Icon */
+.nx-service-icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 20px;
+  color: var(--secondary);
+  transition: transform var(--transition-slow), color var(--transition);
+}
+
+.nx-service-card:hover .nx-service-icon {
+  transform: translateY(-5px) scale(1.1);
+  color: var(--primary);
+}
+
+/* Title */
+.nx-service-card h3 {
+  margin-bottom: 10px;
+}
+
+.nx-service-link {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--bg-soft);
+  align-items: center;
+  justify-content: center;
+  color: var(--secondary);
+  transition: var(--transition);
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+/* Show on hover */
+.nx-service-card:hover .nx-service-link {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hover effect */
+.nx-service-link:hover {
+  background: var(--secondary);
+  color: var(--text-dark);
+}
+
+/*======================
+	ABOUT SECTION
+========================*/
+/* Points */
+.nx-about-item {
+  gap: 15px;
+  align-items: flex-start;
+  margin-bottom: 25px;
+}
+
+.nx-about-icon {
+  width: 45px;
+  height: 45px;
+  color: var(--secondary);
+  flex-shrink: 0;
+}
+
+.nx-about-content {
+	max-width: 400px;
+}
+
+/* Text */
+.nx-about-content h4 {
+  margin-bottom: 5px;
+}
+
+.nx-about-content p {
+  font-size: var(--fs-small);
+  opacity: 0.8;
+}
+
+/* Stats Grid */
+.nx-about-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* Stat Card */
+.nx-stat-card {
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 25px;
+  transition: transform var(--transition),
+  						border-color var(--transition),
+  						box-shadow var(--transition);
+  will-change: transform;
+}
+.nx-stat-inner {
+	transition: transform var(--transition);
+}
+
+/* Hover */
+.nx-stat-card:hover {
+	transform: translateY(-5px) scale(1.02);
+  border-color: var(--secondary);
+  box-shadow: var(--shadow-soft);
+}
+.nx-stat-card:hover .nx-stat-inner {
+	transform: translateY(-5px) scale(1.02);
+}
+
+/* Numbers */
+.nx-stat-card h3 {
+	font-size: 32px;
+  color: var(--secondary);
+  margin-bottom: 5px;
+}
+
+/* Label */
+.nx-stat-card p {
+  font-size: var(--fs-small);
+}
+
+/*======================
+	PORTFOLIO SECTION
+========================*/
+/* Card */
+.nx-portfolio-card {
+  position: relative;
+  display: block;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+/* Image */
+.nx-portfolio-img {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3; /* or 1/1 or 16/10 */
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+}
+
+.nx-portfolio-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+/* Overlay */
+.nx-portfolio-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+					    to top,
+					    rgba(11,28,44,0.95),
+					    rgba(11,28,44,0.6),
+					    rgba(11, 28, 44, 0.3)
+					  );
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 25px;
+  opacity: 0;
+  transition: transform var(--transition-slow);
+}
+
+/* Text */
+.nx-category {
+  font-size: 12px;
+  color: var(--secondary);
+  margin-bottom: 5px;
+}
+
+.nx-portfolio-overlay h3 {
+  margin-bottom: 5px;
+}
+
+.nx-portfolio-overlay p {
+  font-size: var(--fs-small);
+}
+
+/* ARROW */
+.nx-portfolio-arrow {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: var(--secondary);
+}
+
+/* HOVER EFFECT */
+.nx-portfolio-card:hover img {
+  transform: scale(1.1);
+  filter: brightness(0.7);
+}
+
+.nx-portfolio-card:hover .nx-portfolio-overlay {
+  opacity: 1;
+}

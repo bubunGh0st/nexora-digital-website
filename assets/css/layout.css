@@ -1,0 +1,315 @@
+/* All Layout CSS Goes Here */
+
+/*============
+	NAVBAR 
+==============*/
+.nx-navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  padding: 20px 0;
+  transition: all var(--transition);
+}
+
+.nx-navbar.scrolled {
+  background: rgba(11, 28, 44, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--bg-soft);
+}
+
+/* Wrapper */
+.nx-nav-wrapper {
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.nx-logo a {
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.nx-logo img {
+  height: 42px;
+  width: auto;
+}
+
+/* Menu */
+.nx-nav-menu {
+  backdrop-filter: blur(10px);
+}
+
+.nx-nav-menu ul {
+  display: flex;
+  gap: 30px;
+  margin: 0;
+}
+
+.nx-nav-menu a {
+  font-weight: 500;
+  position: relative;
+  transition: color var(--transition);
+}
+
+/* Hover underline */
+.nx-nav-menu a::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: var(--primary);
+  transition: width var(--transition);
+}
+
+.nx-nav-menu a:hover::after {
+  width: 100%;
+}
+
+.nx-nav-menu a.active {
+  color: var(--primary);
+}
+
+.nx-nav-menu a.active::after {
+  width: 100%;
+}
+
+/* Right Side */
+.nx-nav-right {
+  align-items: center;
+  gap: 20px;
+}
+
+/* Theme Toggle */
+.nx-theme-toggle {
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  padding: 8px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+
+.nx-theme-toggle svg {
+  width: 18px;
+  height: 18px;
+}
+
+.nx-theme-toggle svg {
+  transition: transform var(--transition);
+}
+
+.nx-theme-toggle:hover svg {
+  transform: rotate(20deg);
+}
+
+/* CTA Button */
+.nx-nav-menu .nx-btn-primary {
+  display: none;
+}
+
+/* Mobile Toggle */
+.nx-menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.nx-menu-toggle span {
+  width: 25px;
+  height: 2px;
+  background: var(--text);
+  margin: 4px 0;
+}
+
+/*============
+  FOOTER 
+==============*/
+.nx-footer {
+  background: var(--bg);
+  padding: 60px 0 30px;
+  border-top: 1px solid var(--border);
+  box-shadow: 0 -10px 50px rgba(86, 204, 242, 0.1);
+}
+
+/* Brand */
+.nx-footer-brand img {
+  width: 140px;
+  margin-bottom: 15px;
+}
+
+.nx-footer p {
+  font-size: var(--fs-small);
+}
+
+/* Headings */
+.nx-footer h4 {
+  margin-bottom: 15px;
+}
+
+/* Links */
+.nx-footer ul li {
+  margin-bottom: 8px;
+}
+
+.nx-footer ul li a {
+  color: var(--text-muted);
+  transition: var(--transition);
+  font-size: var(--fs-small);
+}
+
+.nx-footer ul li a:hover {
+  color: var(--secondary);
+}
+
+/* Contact */
+.nx-footer-contact li a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nx-footer-contact li a:hover {
+  color: var(--text) !important;
+}
+
+.nx-footer-contact svg {
+  width: 18px;
+  height: 18px;
+  color: var(--secondary);
+  flex-shrink: 0;
+}
+
+.nx-footer-contact li a:hover svg {
+  color: var(--primary);
+  transform: translateX(2px);
+}
+
+/* Social */
+.nx-footer-social {
+  margin-top: 30px;
+  gap: 15px;
+}
+
+.nx-social {
+  width: 40px;
+  height: 40px;
+  background: var(--bg-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: var(--text-light);
+  transition: var(--transition);
+  position: relative;
+}
+
+.nx-social:hover {
+  background: var(--gradient-primary);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px var(--border-blue);
+  color: var(--text);
+}
+
+.nx-social:nth-child(1):hover { background: #1877F2; } /* Facebook */
+.nx-social:nth-child(2):hover { background: #E4405F; } /* Instagram */
+.nx-social:nth-child(3):hover { background: #0B1C2C; } /* X */
+.nx-social:nth-child(4):hover { background: #0A66C2; } /* LinkedIn */
+
+/* Tooltip Base */
+.nx-social {
+  position: relative;
+}
+
+/* Tooltip Text */
+.nx-social::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 120%; /* above icon */
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+
+  background: var(--bg-dark);
+  color: var(--text-light);
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 6px;
+  box-shadow: 0 5px 20px rgba(86, 204, 242, 0.2);
+
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+
+  transition: var(--transition);
+}
+
+/* Tooltip Arrow */
+.nx-social::before {
+  content: "";
+  position: absolute;
+  bottom: 105%;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+
+  border-width: 6px;
+  border-style: solid;
+  border-color: var(--bg-dark) transparent transparent transparent;
+
+  opacity: 0;
+  transition: var(--transition);
+}
+
+/* Show on hover */
+.nx-social:hover::after,
+.nx-social:hover::before {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Footer Mini CTA */
+.nx-footer-cta {
+  margin-top: 30px;
+}
+
+.nx-footer-cta p {
+  margin-bottom: 10px;
+}
+
+/* WhatsApp Button */
+.nx-footer-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #25D366;
+  color: var(--text);
+  padding: 10px 18px;
+  border-radius: 50px;
+  font-size: 14px;
+  transition: var(--transition);
+}
+
+.nx-footer-whatsapp:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
+}
+
+.nx-footer-whatsapp {
+  animation: whatsappPulse 2.5s infinite;
+}
+
+/* Bottom */
+.nx-footer-bottom {
+  margin-top: 30px;
+  border-top: 1px solid var(--border);
+  padding-top: 15px;
+}
+
+.nx-footer-bottom p {
+  font-size: 13px;
+  max-width: 100%;
+}
