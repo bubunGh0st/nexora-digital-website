@@ -23,8 +23,8 @@ let MAX_DISTANCE;
 const isMobile = window.innerWidth < 768;
 
 if (window.innerWidth < 576) {
-  NODE_COUNT = 22;
-  MAX_DISTANCE = 65;
+  NODE_COUNT = 40;
+  MAX_DISTANCE = 855;
 }
 else if (window.innerWidth < 992) {
   NODE_COUNT = 40;
@@ -95,7 +95,7 @@ function draw() {
 
         ctx.strokeStyle = `rgba(86, 204, 242, ${1 - dist / MAX_DISTANCE})`;
 
-        ctx.lineWidth = isMobile ? 0.6 : 1;
+        ctx.lineWidth = 1;
 
         ctx.beginPath();
 
