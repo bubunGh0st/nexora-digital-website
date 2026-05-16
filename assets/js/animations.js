@@ -9,16 +9,33 @@ AOS.init({
 });
 
 /*======================
-    HERO ANIMATION
+    HERO NETWORK ANIMATION
 ========================*/
-// Hero Section Animation
+
+// Canvas
 const canvas = document.getElementById("networkCanvas");
 const ctx = canvas.getContext("2d");
 
-let nodes = [];
-const NODE_COUNT = 80;
-const MAX_DISTANCE = 120;
+// Responsive Settings
+let NODE_COUNT;
+let MAX_DISTANCE;
 
+const isMobile = window.innerWidth < 768;
+
+if (window.innerWidth < 576) {
+  NODE_COUNT = 22;
+  MAX_DISTANCE = 65;
+}
+else if (window.innerWidth < 992) {
+  NODE_COUNT = 40;
+  MAX_DISTANCE = 85;
+}
+else {
+  NODE_COUNT = 80;
+  MAX_DISTANCE = 120;
+}
+
+// Canvas Resize
 function resizeCanvas() {
   canvas.width = canvas.offsetWidth;
   canvas.height = canvas.offsetHeight;
@@ -27,21 +44,29 @@ function resizeCanvas() {
 window.addEventListener("resize", resizeCanvas);
 resizeCanvas();
 
-// Create nodes
+// Nodes Array
+let nodes = [];
+
+// Create Nodes
 for (let i = 0; i < NODE_COUNT; i++) {
   nodes.push({
     x: Math.random() * canvas.width,
     y: Math.random() * canvas.height,
-    vx: (Math.random() - 0.5) * 0.6,
-    vy: (Math.random() - 0.5) * 0.6
+
+    vx: (Math.random() - 0.5) * (isMobile ? 0.35 : 0.6),
+    vy: (Math.random() - 0.5) * (isMobile ? 0.35 : 0.6)
   });
 }
 
-// Mouse
-let mouse = { x: null, y: null };
+// Mouse Interaction
+let mouse = {
+  x: null,
+  y: null
+};
 
 canvas.addEventListener("mousemove", (e) => {
   const rect = canvas.getBoundingClientRect();
+
   mouse.x = e.clientX - rect.left;
   mouse.y = e.clientY - rect.top;
 });
@@ -51,28 +76,38 @@ canvas.addEventListener("mouseleave", () => {
   mouse.y = null;
 });
 
+// Draw Animation
 function draw() {
+
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-  // Draw connections
+  /* DRAW CONNECTIONS */
   for (let i = 0; i < nodes.length; i++) {
+
     for (let j = i + 1; j < nodes.length; j++) {
-      let dx = nodes[i].x - nodes[j].x;
-      let dy = nodes[i].y - nodes[j].y;
-      let dist = Math.sqrt(dx * dx + dy * dy);
+
+      const dx = nodes[i].x - nodes[j].x;
+      const dy = nodes[i].y - nodes[j].y;
+
+      const dist = Math.sqrt(dx * dx + dy * dy);
 
       if (dist < MAX_DISTANCE) {
+
         ctx.strokeStyle = `rgba(86, 204, 242, ${1 - dist / MAX_DISTANCE})`;
-        ctx.lineWidth = 1;
+
+        ctx.lineWidth = isMobile ? 0.6 : 1;
+
         ctx.beginPath();
+
         ctx.moveTo(nodes[i].x, nodes[i].y);
         ctx.lineTo(nodes[j].x, nodes[j].y);
+
         ctx.stroke();
       }
     }
   }
 
-  // Draw nodes
+  /* DRAW NODES */
   nodes.forEach(node => {
 
     // Move
@@ -80,29 +115,52 @@ function draw() {
     node.y += node.vy;
 
     // Bounce
-    if (node.x < 0 || node.x > canvas.width) node.vx *= -1;
-    if (node.y < 0 || node.y > canvas.height) node.vy *= -1;
+    if (node.x < 0 || node.x > canvas.width) {
+      node.vx *= -1;
+    }
 
-    // Glow
+    if (node.y < 0 || node.y > canvas.height) {
+      node.vy *= -1;
+    }
+
+    // Glow Gradient
     const gradient = ctx.createRadialGradient(
-      node.x, node.y, 0,
-      node.x, node.y, 6
+      node.x,
+      node.y,
+      0,
+      node.x,
+      node.y,
+      isMobile ? 4 : 6
     );
+
     gradient.addColorStop(0, "#56CCF2");
     gradient.addColorStop(1, "transparent");
 
+    // Draw Node
     ctx.fillStyle = gradient;
+
     ctx.beginPath();
-    ctx.arc(node.x, node.y, 3, 0, Math.PI * 2);
+
+    ctx.arc(
+      node.x,
+      node.y,
+      isMobile ? 2 : 3,
+      0,
+      Math.PI * 2
+    );
+
     ctx.fill();
 
-    // Mouse interaction
+    /* MOUSE INTERACTION */
     if (mouse.x && mouse.y) {
-      let dx = node.x - mouse.x;
-      let dy = node.y - mouse.y;
-      let dist = Math.sqrt(dx * dx + dy * dy);
+
+      const dx = node.x - mouse.x;
+      const dy = node.y - mouse.y;
+
+      const dist = Math.sqrt(dx * dx + dy * dy);
 
       if (dist < 100) {
+
         node.x += dx * 0.01;
         node.y += dy * 0.01;
       }
@@ -110,11 +168,27 @@ function draw() {
 
   });
 
-  requestAnimationFrame(draw);
+  /* ANIMATION LOOP */
+
+  // Lower FPS on mobile for smoother performance
+  if (isMobile) {
+
+    setTimeout(() => {
+      requestAnimationFrame(draw);
+    }, 1000 / 40);
+
+  } else {
+
+    requestAnimationFrame(draw);
+
+  }
+
 }
 
+// Start Animation
 draw();
 
+/* GSAP ENTRY ANIMATION */
 gsap.from("#networkCanvas", {
   opacity: 0,
   duration: 1.5
