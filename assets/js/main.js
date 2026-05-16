@@ -1,25 +1,6 @@
 /* Gloabl JS Goes Here */
 
 /*======================
-    LENIS OPTIMIZED
-========================*/
-
-// const lenis = new Lenis({
-//   duration: 1,          // lower = faster response
-//   lerp: 0.12,            // 🔥 key fix (default is too low = laggy)
-//   smoothWheel: true,
-//   smoothTouch: false,   // improves performance
-//   wheelMultiplier: 1.1  // slight boost for responsiveness
-// });
-
-// function raf(time) {
-//   lenis.raf(time);
-//   requestAnimationFrame(raf);
-// }
-
-// requestAnimationFrame(raf);
-
-/*======================
     LOAD NAVBAR
 ========================*/
 // Loading Navbar in Index.html
