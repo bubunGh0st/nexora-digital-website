@@ -158,8 +158,12 @@
   transition: var(--transition);
 }
 
+.nx-scroll-icon svg {
+  color: var(--text);
+}
+
 .nx-scroll-top:hover .nx-scroll-icon {
   background: var(--primary);
-  transform: translateY(-3px);
+  transform: translateY(0px);
   box-shadow: 0 10px 25px rgba(47, 128, 237, 0.4);
 }
