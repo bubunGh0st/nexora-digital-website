@@ -24,7 +24,7 @@ const isMobile = window.innerWidth < 768;
 
 if (window.innerWidth < 576) {
   NODE_COUNT = 40;
-  MAX_DISTANCE = 855;
+  MAX_DISTANCE = 85;
 }
 else if (window.innerWidth < 992) {
   NODE_COUNT = 40;
