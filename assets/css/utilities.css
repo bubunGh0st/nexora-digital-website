@@ -167,3 +167,7 @@
   transform: translateY(0px);
   box-shadow: 0 10px 25px rgba(47, 128, 237, 0.4);
 }
+
+.nx-scroll-top:hover .nx-scroll-icon svg {
+  color: var(--text-dark);
+}
