@@ -109,6 +109,9 @@
 }
 
 @media (max-width: 768px) {
+  /*======================
+      CTA SECTION
+  ========================*/
   .nx-cta-box {
     padding: 25px;
   }
@@ -117,5 +120,13 @@
     width: 200px;
     height: 200px;
     opacity: 0.25;
+  }
+
+  /*======================
+      SCROLL TO TOP
+  ========================*/
+  .nx-scroll-top {
+    right: 15px;
+    bottom: 20px;
   }
 }
