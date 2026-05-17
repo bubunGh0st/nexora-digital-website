@@ -19,8 +19,8 @@ html {
   overflow-x: hidden;
   scroll-behavior: smooth;
 
-  scrollbar-color: var(--primary) var(--bg-dark);
   scrollbar-width: thin;
+  scrollbar-color: var(--primary) var(--bg-dark);
 }
 
 body {
@@ -97,32 +97,45 @@ section {
 }
 
 /* ========================
-    CUSTOM SCROLLBAR
+    ANIMATED SCROLLBAR
 ======================== */
 
-/* Width */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
   background: var(--bg-dark);
 }
 
-/* Thumb */
+/* Animated Thumb */
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(
     180deg,
     var(--primary),
-    var(--secondary)
+    var(--secondary),
+    var(--primary)
   );
 
+  background-size: 100% 300%;
+
   border-radius: 50px;
-  border: 2px solid var(--bg-dark);
+
+  animation: scrollbarFlow 5s linear infinite;
 }
 
 /* Hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--primary);
+  filter: brightness(1.1);
+}
+
+/* Animation */
+@keyframes scrollbarFlow {
+  0% {
+    background-position: 0% 0%;
+  }
+
+  100% {
+    background-position: 0% 300%;
+  }
 }
