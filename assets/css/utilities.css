@@ -104,7 +104,11 @@
   opacity: 0;
   visibility: hidden;
 
-  transition: var(--transition);
+  /*transition: var(--transition);*/
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
 }
 
 .nx-scroll-top.active {
@@ -164,8 +168,11 @@
 
 .nx-scroll-top:hover .nx-scroll-icon {
   background: var(--primary);
-  transform: translateY(0px);
-  box-shadow: 0 10px 25px rgba(47, 128, 237, 0.4);
+  transform: scale(1.02);
+  /*box-shadow: 0 10px 25px rgba(47, 128, 237, 0.4);*/
+  box-shadow:
+    0 10px 30px rgba(47,128,237,0.18),
+    0 0 20px rgba(86,204,242,0.08);
 }
 
 .nx-scroll-top:hover .nx-scroll-icon svg {
