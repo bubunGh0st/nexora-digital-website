@@ -23,16 +23,16 @@ let MAX_DISTANCE;
 const isMobile = window.innerWidth < 768;
 
 if (window.innerWidth < 576) {
-  NODE_COUNT = 40;
-  MAX_DISTANCE = 85;
+  NODE_COUNT = 60;
+  MAX_DISTANCE = 100;
 }
 else if (window.innerWidth < 992) {
-  NODE_COUNT = 40;
-  MAX_DISTANCE = 85;
+  NODE_COUNT = 80;
+  MAX_DISTANCE = 110;
 }
 else {
-  NODE_COUNT = 80;
-  MAX_DISTANCE = 120;
+  NODE_COUNT = 100;
+  MAX_DISTANCE = 130;
 }
 
 // Canvas Resize
