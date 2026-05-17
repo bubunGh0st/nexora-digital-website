@@ -110,6 +110,9 @@ section {
 
 /* Animated Thumb */
 ::-webkit-scrollbar-thumb {
+  background: rgba(86, 204, 242, 0.5);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 10px rgba(86, 204, 242, 0.5);
   background: linear-gradient(
     180deg,
     var(--primary),
