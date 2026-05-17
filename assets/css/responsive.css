@@ -94,6 +94,7 @@
 
   .nx-hero-visual {
     margin-top: 40px;
+    height: 420px;
   }
 
   /*======================
@@ -136,6 +137,13 @@
 }
 
 @media (max-width: 768px) {
+  /*======================
+      HERO SECTION
+  ========================*/
+  .nx-hero-visual {
+    height: 3000px;
+  }
+
   /*======================
       CTA SECTION
   ========================*/
