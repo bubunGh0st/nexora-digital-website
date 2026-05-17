@@ -9,9 +9,6 @@
   --bg-dark: #0B1C2C;
   --bg-light: #F8FAFC;
 
-  --bg-soft: rgba(255,255,255,0.05);
-  --bg-glass: rgba(255,255,255,0.02);
-
   --text-dark: #0B1C2C;
   --text-light: #F8FAFC;
   --text-muted: rgba(255,255,255,0.7);
@@ -19,11 +16,48 @@
   --border: rgba(255,255,255,0.08);
   --border-blue: rgba(86,204,242,0.3);
 
+  /* EFFECT COLORS */
+
+  /* Primary Glow / Shadow */
+  --primary-glow: rgba(47, 128, 237, 0.4);
+
+  /* Secondary Glow Variations */
+  --secondary-glow-sm: rgba(86, 204, 242, 0.1);
+  --secondary-glow-md: rgba(86, 204, 242, 0.2);
+  --secondary-glow-lg: rgba(86, 204, 242, 0.25);
+  --secondary-glow-xl: rgba(86, 204, 242, 0.5);
+
+  /* Glass / Soft Background */
+  --bg-soft: rgba(255,255,255,0.05);
+  --bg-glass: rgba(255,255,255,0.02);
+  --glass-soft: rgba(255,255,255,0.06);
+
+  /* Dark Overlays */
+  --overlay-dark: rgba(0, 0, 0, 0.5);
+  --overlay-blue-dark: rgba(11,28,44,0.95);
+  --overlay-blue-deep: rgba(11, 28, 44, 0.85);
+  --overlay-blue-light: rgba(11,28,44,0.6);
+  --overlay-blue-fade: rgba(11, 28, 44, 0.3);
+  --overlay-blue-transparent: rgba(11, 28, 44, 0.01);
+
+  /* WhatsApp */
+  --whatsapp-glow: rgba(37, 211, 102, 0.4);
+  --whatsapp-glow-strong: rgba(37, 211, 102, 0.5);
+  --whatsapp-glow-transparent: rgba(37, 211, 102, 0);
+
   /* GRADIENTS */
-  --gradient-primary: linear-gradient(135deg, #2F80ED, #56CCF2);
+  --gradient-primary: linear-gradient(135deg, var(--primary), var(--secondary));
+  --gradient-secondary: linear-gradient(90deg, var(--primary), var(--secondary));
 
   /* SHADOWS */
   --shadow-soft: 0 10px 40px rgba(0,0,0,0.4);
+
+  --shadow-sm: 0 5px 20px rgba(0,0,0,0.2);
+  --shadow-md: 0 10px 30px rgba(0,0,0,0.3);
+  --shadow-lg: 0 15px 50px rgba(0,0,0,0.4);
+
+  --shadow-primary: 0 10px 25px var(--primary-glow);
+  --shadow-secondary: 0 10px 30px var(--secondary-glow-lg);
 
   /* BASE COLOR CONTROL */
   --bg: var(--bg-dark);
@@ -68,10 +102,21 @@
   --radius-lg: 16px;
   --radius-xlg: 24px;
 
+  --radius-full: 50%;
+
 /* --------------------------------------------------------------------------------------------------------- */
 
   /* TRANSITION */
   --transition: 0.3s ease;
   --transition-slow: 0.4s ease;
+
+/* --------------------------------------------------------------------------------------------------------- */
+
+  /* Z-INDEX SYSTEM */
+  --z-header: 999;
+  --z-overlay: 998;
+  --z-menu: 1000;
+  --z-modal: 1100;
+  --z-tooltip: 1200;
 
 }

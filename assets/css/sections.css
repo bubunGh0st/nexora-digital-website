@@ -122,7 +122,7 @@
   right: 20px;
   width: 40px;
   height: 40px;
-  border-radius: 50%;
+  border-radius: var(--radius-full);
   background: var(--bg-soft);
   align-items: center;
   justify-content: center;
@@ -252,9 +252,9 @@
   inset: 0;
   background: linear-gradient(
 					    to top,
-					    rgba(11,28,44,0.95),
-					    rgba(11,28,44,0.6),
-					    rgba(11, 28, 44, 0.3)
+					    var(--overlay-blue-dark),
+					    var(--overlay-blue-light),
+					    var(--overlay-blue-fade)
 					  );
   flex-direction: column;
   justify-content: flex-end;

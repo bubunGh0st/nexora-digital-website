@@ -21,7 +21,7 @@
     align-items: center;
     justify-content: center;
     transition: all var(--transition-slow);
-    z-index: 998;
+    z-index: var(--z-overlay);
 
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
@@ -44,7 +44,7 @@
   /* Show Hamburger */
   .nx-menu-toggle {
     display: flex;
-    z-index: 9999;
+    z-index: var(--z-menu);
   }
 
   /* Smooth animation */
