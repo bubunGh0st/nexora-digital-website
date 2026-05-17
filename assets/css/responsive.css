@@ -19,6 +19,9 @@
     justify-content: center;
     transition: all 0.4s ease;
     z-index: 998;
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
   }
 
   .nx-nav-menu.active {
