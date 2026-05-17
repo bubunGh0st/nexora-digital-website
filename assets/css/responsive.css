@@ -126,7 +126,16 @@
       SCROLL TO TOP
   ========================*/
   .nx-scroll-top {
+    width: 56px;
+    height: 56px;
+
     right: 15px;
-    bottom: 20px;
+    bottom: 18px;
   }
+
+  .nx-scroll-icon {
+    width: 42px;
+    height: 42px;
+  }
+
 }
