@@ -23,8 +23,8 @@ let MAX_DISTANCE;
 const isMobile = window.innerWidth < 768;
 
 if (window.innerWidth < 576) {
-  NODE_COUNT = 60;
-  MAX_DISTANCE = 100;
+  NODE_COUNT = 50;
+  MAX_DISTANCE = 80;
 }
 else if (window.innerWidth < 992) {
   NODE_COUNT = 80;
