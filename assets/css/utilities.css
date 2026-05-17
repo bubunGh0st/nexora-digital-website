@@ -168,8 +168,13 @@
 
 .nx-scroll-top:hover .nx-scroll-icon {
   background: var(--primary);
+  
+  box-shadow: 0 10px 25px rgba(47, 128, 237, 0.4);
+ 
+}
+
+.nx-scroll-top:hover {
   transform: scale(1.02);
-  /*box-shadow: 0 10px 25px rgba(47, 128, 237, 0.4);*/
   box-shadow:
     0 10px 30px rgba(47,128,237,0.18),
     0 0 20px rgba(86,204,242,0.08);
