@@ -6,6 +6,9 @@
   /*============
       NAVBAR 
   ==============*/
+  .nx-navbar {
+    overflow: visible;
+  }
   .nx-nav-menu {
     display: flex;
     position: fixed;
@@ -17,7 +20,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    transition: all 0.4s ease;
+    transition: all var(--transition-slow);
     z-index: 998;
 
     backdrop-filter: blur(12px);
@@ -41,6 +44,26 @@
   /* Show Hamburger */
   .nx-menu-toggle {
     display: flex;
+  }
+
+  /* Smooth animation */
+  .nx-menu-toggle span {
+    transition: all var(--transition);
+  }
+
+  /* Top line */
+  .nx-menu-toggle.active span:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+  }
+
+  /* Middle line */
+  .nx-menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  /* Bottom line */
+  .nx-menu-toggle.active span:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
   }
 
   /* CTA mobile version */

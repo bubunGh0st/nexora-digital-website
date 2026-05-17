@@ -18,17 +18,25 @@ function initNavbar() {
 
   if (menuToggle && navMenu) {
     menuToggle.addEventListener("click", () => {
+
       navMenu.classList.toggle("active");
+      menuToggle.classList.toggle("active");
+
+      // Prevent body scroll
+      document.body.classList.toggle("menu-open");
 
       // Animate menu items
       if (navMenu.classList.contains("active")) {
+
         gsap.from(".nx-nav-menu li", {
           opacity: 0,
           y: 30,
           stagger: 0.1,
           duration: 0.5
         });
+
       }
+
     });
   }
 
@@ -48,6 +56,9 @@ function initNavbar() {
       link.addEventListener("click", () => {
         if (window.innerWidth <= 992) {
           navMenu.classList.remove("active");
+          menuToggle.classList.remove("active");
+
+          document.body.classList.remove("menu-open");
         }
       });
     });
