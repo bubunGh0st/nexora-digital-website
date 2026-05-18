@@ -85,22 +85,6 @@ function initTestimonials() {
 }
 
 /*======================
-    LOAD NAVBAR
-========================*/
-// Loading Navbar in Index.html
-/*document.addEventListener("DOMContentLoaded", function () {
-  fetch('components/navbar.html')
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById('navbar').innerHTML = data;
-
-      lucide.createIcons();
-      initNavbar();
-      initThemeToggle();
-    });
-});*/
-
-/*======================
   ABOUT SECTION COUNTER
 ========================*/
 const counters = document.querySelectorAll(".nx-counter");
@@ -134,63 +118,6 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll(".nx-about-stats").forEach(section => {
   observer.observe(section);
 });
-
-/*======================
-    LOAD TESTIMONIALS
-========================*/
-/*document.addEventListener("DOMContentLoaded", function () {
-  fetch('components/testimonials.html')
-  .then(res => res.text())
-  .then(data => {
-    document.getElementById('testimonials').innerHTML = data;
-
-    // re-init icons & swiper after load
-    lucide.createIcons();
-
-    new Swiper(".nx-testimonial-slider", {
-      loop: true,
-      spaceBetween: 30,
-      autoplay: {
-        delay: 4000,
-        disableOnInteraction: false,
-        pauseOnMouseEnter: true,
-      },
-      navigation: {
-        nextEl: ".nx-testimonial-next",
-        prevEl: ".nx-testimonial-prev",
-      },
-      breakpoints: {
-        0: { slidesPerView: 1 },
-        768: { slidesPerView: 2 },
-        992: { slidesPerView: 3 }
-      }
-    });
-  });
-});*/
-
-/*======================
-    LOAD CTA SECTION
-========================*/
-/*document.addEventListener("DOMContentLoaded", function () {
-  fetch('components/cta-section.html')
-  .then(res => res.text())
-  .then(data => {
-    document.getElementById('cta').innerHTML = data;
-    AOS.refresh();
-  });
-});*/
-
-/*======================
-    LOAD FOOTER
-========================*/
-/*document.addEventListener("DOMContentLoaded", function () {
-  fetch('components/footer.html')
-  .then(res => res.text())
-  .then(data => {
-    document.getElementById('footer').innerHTML = data;
-    lucide.createIcons();
-  });
-});*/
 
 /*======================
     TOP TO SCROLL
