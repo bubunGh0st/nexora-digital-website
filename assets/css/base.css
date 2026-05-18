@@ -39,7 +39,8 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-body.menu-open {
+body.menu-open,
+body.loading {
   overflow: hidden;
 }
 
