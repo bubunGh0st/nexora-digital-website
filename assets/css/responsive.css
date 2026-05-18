@@ -158,6 +158,53 @@
   }
 
   /*======================
+    FOOTER RESPONSIVE
+  ========================*/
+  .nx-footer {
+    text-align: center;
+  }
+
+  /* Brand */
+  .nx-footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Lists */
+  .nx-footer ul {
+    padding-left: 0;
+  }
+
+  /* Contact Items */
+  .nx-footer-contact li a {
+    justify-content: center;
+  }
+
+  /* Social Icons */
+  .nx-footer-social {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* CTA */
+  .nx-footer-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* WhatsApp Button */
+  .nx-footer-whatsapp {
+    justify-content: center;
+  }
+
+  /* Footer Bottom */
+  .nx-footer-bottom {
+    text-align: center;
+  }
+
+  /*======================
       SCROLL TO TOP
   ========================*/
   .nx-scroll-top {
