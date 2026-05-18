@@ -4,7 +4,7 @@
     LOAD NAVBAR
 ========================*/
 // Loading Navbar in Index.html
-document.addEventListener("DOMContentLoaded", function () {
+/*document.addEventListener("DOMContentLoaded", function () {
   fetch('components/navbar.html')
     .then(res => res.text())
     .then(data => {
@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
       initNavbar();
       initThemeToggle();
     });
-});
+});*/
 
 /*======================
   ABOUT SECTION COUNTER
@@ -54,7 +54,7 @@ document.querySelectorAll(".nx-about-stats").forEach(section => {
 /*======================
     LOAD TESTIMONIALS
 ========================*/
-document.addEventListener("DOMContentLoaded", function () {
+/*document.addEventListener("DOMContentLoaded", function () {
   fetch('components/testimonials.html')
   .then(res => res.text())
   .then(data => {
@@ -82,31 +82,31 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
-});
+});*/
 
 /*======================
     LOAD CTA SECTION
 ========================*/
-document.addEventListener("DOMContentLoaded", function () {
+/*document.addEventListener("DOMContentLoaded", function () {
   fetch('components/cta-section.html')
   .then(res => res.text())
   .then(data => {
     document.getElementById('cta').innerHTML = data;
     AOS.refresh();
   });
-});
+});*/
 
 /*======================
     LOAD FOOTER
 ========================*/
-document.addEventListener("DOMContentLoaded", function () {
+/*document.addEventListener("DOMContentLoaded", function () {
   fetch('components/footer.html')
   .then(res => res.text())
   .then(data => {
     document.getElementById('footer').innerHTML = data;
     lucide.createIcons();
   });
-});
+});*/
 
 /*======================
     TOP TO SCROLL
