@@ -1,12 +1,12 @@
 /* All Sections CSS Goes Here */
 
 /*======================
-	HERO SECTION
+  HERO SECTION
 ========================*/
 .nx-hero {
-	min-height: 100vh;
-	background: radial-gradient(circle at 20% 20%, #0f2a44, var(--bg-dark));
-	padding-top: 100px;
+  min-height: 100vh;
+  background: radial-gradient(circle at 20% 20%, #0f2a44, var(--bg-dark));
+  padding-top: 100px;
 }
 
 .nx-hero .row {
@@ -19,49 +19,49 @@
   max-width: 620px;
 }
 .nx-hero-content h1 {
-	font-weight: 700;
-	color: var(--text-light);
-	margin-bottom: 20px;
-	}
+  font-weight: 700;
+  color: var(--text-light);
+  margin-bottom: 20px;
+  }
 
 .nx-hero-content p {
-	font-size: 18px;
-	margin-bottom: 30px;
+  font-size: 18px;
+  margin-bottom: 30px;
 }
 
 /* CTA */
 .nx-hero-cta {
- 	gap: 15px;
+  gap: 15px;
 }
 
 /* Visual */
 .nx-hero-visual {
-	position: relative;
-	width: 100%;
-	height: min(700px, 75vh);
+  position: relative;
+  width: 100%;
+  height: min(700px, 75vh);
 }
 
 #networkCanvas {
-	width: 100%;
-	height: 100%;
-	display: block;
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 /*======================
-	SERVICES SECTION
+  SERVICES SECTION
 ========================*/
 /* Card */
 .nx-service-card {
-	display: block;
-	background: var(--bg-glass);
-	border: 1px solid var(--bg-soft);
-	padding: 30px;
-	border-radius: var(--radius-lg);
-	transition: var(--transition);
-	height: 100%;
-	position: relative;
-	overflow: hidden;
-	cursor: pointer;
+  display: block;
+  background: var(--bg-glass);
+  border: 1px solid var(--bg-soft);
+  padding: 30px;
+  border-radius: var(--radius-lg);
+  transition: var(--transition);
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
 }
 
 /* Gradient border layer */
@@ -145,7 +145,7 @@
 }
 
 /*======================
-	HOME ABOUT SECTION
+  HOME ABOUT SECTION
 ========================*/
 /* Points */
 .nx-about-item {
@@ -162,7 +162,7 @@
 }
 
 .nx-about-content {
-	max-width: 400px;
+  max-width: 400px;
 }
 
 /* Text */
@@ -189,27 +189,27 @@
   border-radius: var(--radius-lg);
   padding: 25px;
   transition: transform var(--transition),
-  						border-color var(--transition),
-  						box-shadow var(--transition);
+              border-color var(--transition),
+              box-shadow var(--transition);
   will-change: transform;
 }
 .nx-stat-inner {
-	transition: transform var(--transition);
+  transition: transform var(--transition);
 }
 
 /* Hover */
 .nx-stat-card:hover {
-	transform: translateY(-5px) scale(1.02);
+  transform: translateY(-5px) scale(1.02);
   border-color: var(--secondary);
   box-shadow: var(--shadow-soft);
 }
 .nx-stat-card:hover .nx-stat-inner {
-	transform: translateY(-5px) scale(1.02);
+  transform: translateY(-5px) scale(1.02);
 }
 
 /* Numbers */
 .nx-stat-card h3 {
-	font-size: 32px;
+  font-size: 32px;
   color: var(--secondary);
   margin-bottom: 5px;
 }
@@ -220,7 +220,7 @@
 }
 
 /*======================
-	PORTFOLIO SECTION
+  PORTFOLIO SECTION
 ========================*/
 /* Card */
 .nx-portfolio-card {
@@ -251,11 +251,11 @@
   position: absolute;
   inset: 0;
   background: linear-gradient(
-					    to top,
-					    var(--overlay-blue-dark),
-					    var(--overlay-blue-light),
-					    var(--overlay-blue-fade)
-					  );
+              to top,
+              var(--overlay-blue-dark),
+              var(--overlay-blue-light),
+              var(--overlay-blue-fade)
+            );
   flex-direction: column;
   justify-content: flex-end;
   padding: 25px;
@@ -295,6 +295,10 @@
 .nx-portfolio-card:hover .nx-portfolio-overlay {
   opacity: 1;
 }
+
+/* ========================
+   ABOUT PAGE START HERE
+======================== */
 
 /* ========================
    ABOUT PAGE: ABOUT STORY
@@ -357,16 +361,13 @@
   font-weight: 600;
 }
 
-/* ========================
-    ABOUT PAGE: STATS
-======================== */
-
+/* Stats */
 .nx-about-stats {
   position: relative;
 }
 
 /* ========================
-    WHY CHOOSE US
+   ABOUT PAGE: WHY CHOOSE US
 ======================== */
 
 .nx-why-card {
@@ -404,4 +405,187 @@
 
 .nx-why-card h4 {
   margin-bottom: 16px;
+}
+
+/* ============================
+   ABOUT PAGE: MISSION / VISION
+=============================== */
+
+.nx-mission-card {
+  height: 100%;
+  padding: 45px 35px;
+  background: var(--bg-glass);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  transition: var(--transition);
+}
+
+.nx-mission-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--border-blue);
+  box-shadow: var(--shadow-secondary);
+}
+
+.nx-mission-icon {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  border-radius: var(--radius-full);
+  background: var(--gradient-primary);
+  color: var(--text-light);
+  box-shadow: var(--shadow-primary);
+}
+
+.nx-mission-icon svg {
+  width: 30px;
+  height: 30px;
+}
+
+.nx-mission-card h3 {
+  margin-bottom: 18px;
+}
+
+/* ========================
+   ABOUT PAGE: PROCESS
+======================== */
+
+.nx-process {
+  position: relative;
+}
+
+.nx-process-card {
+  position: relative;
+  height: 100%;
+  padding: 40px 30px;
+  background: var(--bg-glass);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  transition: var(--transition);
+  overflow: hidden;
+}
+
+.nx-process-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--border-blue);
+  box-shadow: var(--shadow-secondary);
+}
+
+/* Number */
+.nx-process-number {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--overlay-blue-light);
+}
+
+/* Icon */
+.nx-process-icon {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  border-radius: var(--radius-full);
+  background: var(--gradient-primary);
+  color: var(--text-light);
+  box-shadow: var(--shadow-primary);
+}
+
+.nx-process-icon svg {
+  width: 30px;
+  height: 30px;
+}
+
+.nx-process-card h4 {
+  margin-bottom: 16px;
+}
+
+/* ========================
+    FOUNDER
+======================== */
+
+#nx-founder .nx-divider {
+  margin: 20px 30px;
+}
+
+.nx-founder {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Glow Background */
+.nx-founder::before {
+  content: "";
+  position: absolute;
+  top: -150px;
+  right: -150px;
+  width: 400px;
+  height: 400px;
+  background: var(--secondary-glow-lg);
+  filter: blur(140px);
+  border-radius: var(--radius-full);
+  opacity: 0.25;
+  z-index: 0;
+}
+
+.nx-founder::after {
+  content: "";
+  position: absolute;
+  bottom: -120px;
+  left: -120px;
+  width: 300px;
+  height: 300px;
+  background: var(--primary-glow);
+  border-radius: var(--radius-full);
+  opacity: 0.15;
+  filter: blur(120px);
+  z-index: 0;
+}
+
+.nx-founder-box {
+  position: relative;
+  z-index: 1;
+  padding: 70px;
+  border-radius: var(--radius-xlg);
+  background:
+    linear-gradient(
+      135deg,
+      var(--overlay-blue-light),
+      var(--overlay-blue-dark)
+    );
+  overflow: hidden;
+}
+
+.nx-founder-image {
+  position: relative;
+  max-width: 320px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-secondary);
+}
+
+.nx-founder-image img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  transition: var(--transition-slow);
+}
+
+.nx-founder-image:hover img {
+  transform: scale(1.05);
+}
+
+.nx-founder-quote {
+  font-size: clamp(20px, 2vw, 28px);
+  line-height: 1.5;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 24px;
 }

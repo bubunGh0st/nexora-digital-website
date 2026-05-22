@@ -220,4 +220,11 @@
     height: 42px;
   }
 
+  /* ========================
+    FOUNDER
+  ======================== */
+  #nx-founder .nx-divider {
+    margin: 20px auto;
+  }
+
 }
