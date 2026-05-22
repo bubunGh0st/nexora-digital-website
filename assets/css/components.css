@@ -369,3 +369,88 @@
     box-shadow: 0 0 50px var(--secondary-glow-xl);
   }
 }
+
+/* ========================
+    PAGE HERO
+======================== */
+
+.nx-page-hero {
+  position: relative;
+  padding: 180px 0 100px;
+
+  background:
+    radial-gradient(
+      circle at top right,
+      var(--secondary-glow-md),
+      transparent 35%
+    ),
+    var(--bg);
+
+  overflow: hidden;
+}
+
+/* Glow Blob */
+.nx-page-hero-glow {
+  position: absolute;
+
+  top: -120px;
+  right: -120px;
+
+  width: 350px;
+  height: 350px;
+
+  background: var(--gradient-primary);
+
+  opacity: 0.15;
+
+  filter: blur(120px);
+
+  border-radius: var(--radius-full);
+
+  animation: floatGlow 10s ease-in-out infinite;
+}
+
+/* Breadcrumb */
+.nx-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 24px;
+
+  font-size: var(--fs-small);
+
+  color: var(--text-muted);
+}
+
+.nx-breadcrumb a {
+  transition: var(--transition);
+}
+
+.nx-breadcrumb a:hover {
+  color: var(--secondary);
+}
+
+.nx-breadcrumb .active {
+  color: var(--text-light);
+}
+
+/* Content */
+.nx-page-hero-content {
+  max-width: 700px;
+}
+
+.nx-page-hero-content h1 {
+  margin-bottom: 20px;
+}
+
+.nx-page-hero-content h1 span {
+  background: var(--gradient-primary);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nx-page-hero-content p {
+  font-size: 18px;
+}
