@@ -133,6 +133,34 @@
     width: 240px;
     height: 240px;
   }
+
+  /* ============================
+    SERVICES: SERVICE PROCESS
+  =============================== */
+  .nx-process-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .nx-process-line {
+    display: none;
+  }
+
+  .nx-process-step {
+    padding-top: 40px;
+    padding-left: 40px;
+  }
+
+  .nx-process-dot {
+    top: 48px;
+    left: 0;
+  }
+
+  /* ========================
+    SERVICES: TECH STACK
+  =========================== */
+  .nx-tech-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
   
 }
 
@@ -225,6 +253,46 @@
   ======================== */
   #nx-founder .nx-divider {
     margin: 20px auto;
+  }
+
+
+  /* ========================
+    SERVICES: WHY NEXORA
+  =========================== */
+  .nx-why-item {
+    gap: 20px;
+  }
+
+  .nx-why-item-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nx-why-item-icon svg {
+    width: 26px;
+    height: 26px;
+  }
+
+}
+
+@media (max-width: 576px) {
+
+  /* ========================
+    SERVICES: TECH STACK
+  =========================== */
+  .nx-tech-grid {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 18px;
+  }
+
+  .nx-tech-item {
+    padding: 24px 16px;
+  }
+
+  .nx-tech-item img {
+    width: 48px;
+    height: 48px;
   }
 
 }

@@ -173,3 +173,33 @@ window.addEventListener("load", () => {
     document.body.classList.remove("loading");
   }, 500);
 });
+
+/* ======================
+    FAQ
+====================== */
+
+const faqItems = document.querySelectorAll(".nx-faq-item");
+
+faqItems.forEach((item) => {
+
+  const question = item.querySelector(".nx-faq-question");
+  question.addEventListener("click", () => {
+
+    const activeItem = document.querySelector(".nx-faq-item.active");
+    if (activeItem && activeItem !== item) {
+
+      activeItem.classList.remove("active");
+      activeItem.querySelector(".nx-faq-answer").style.maxHeight = null;
+
+    }
+    item.classList.toggle("active");
+    const answer = item.querySelector(".nx-faq-answer");
+    if (item.classList.contains("active")) {
+
+      answer.style.maxHeight = answer.scrollHeight + "px";
+
+    } else {
+      answer.style.maxHeight = null;
+    }
+  });
+});
