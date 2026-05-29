@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   await loadComponent("navbar", "components/navbar.html");
   await loadComponent("pageHero", "components/page-hero.html");
   await loadComponent("testimonials", "components/testimonials.html");
+  await loadComponent("faq", "components/faq.html");
   await loadComponent("cta", "components/cta-section.html");
   await loadComponent("footer", "components/footer.html");
 
@@ -20,6 +21,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   initNavbar();
   initThemeToggle();
   initTestimonials();
+  initFAQ();
 
   // Refresh AOS
   AOS.refresh();
@@ -178,28 +180,35 @@ window.addEventListener("load", () => {
     FAQ
 ====================== */
 
-const faqItems = document.querySelectorAll(".nx-faq-item");
+function initFAQ() {
 
-faqItems.forEach((item) => {
+  const faqItems = document.querySelectorAll(".nx-faq-item");
 
-  const question = item.querySelector(".nx-faq-question");
-  question.addEventListener("click", () => {
+  // OPEN DEFAULT ACTIVE ITEM
+  const activeItem = document.querySelector(".nx-faq-item.active");
 
-    const activeItem = document.querySelector(".nx-faq-item.active");
-    if (activeItem && activeItem !== item) {
+  if (activeItem) {
+    const activeAnswer = activeItem.querySelector(".nx-faq-answer");
+    activeAnswer.style.maxHeight = activeAnswer.scrollHeight + "px";
+  }
+  faqItems.forEach((item) => {
+    const question = item.querySelector(".nx-faq-question");
 
-      activeItem.classList.remove("active");
-      activeItem.querySelector(".nx-faq-answer").style.maxHeight = null;
+    question.addEventListener("click", () => {
+      const activeItem = document.querySelector(".nx-faq-item.active");
 
-    }
-    item.classList.toggle("active");
-    const answer = item.querySelector(".nx-faq-answer");
-    if (item.classList.contains("active")) {
+      if (activeItem && activeItem !== item) {
+        activeItem.classList.remove("active");
+        activeItem.querySelector(".nx-faq-answer").style.maxHeight = null;
+      }
+      item.classList.toggle("active");
+      const answer = item.querySelector(".nx-faq-answer");
 
-      answer.style.maxHeight = answer.scrollHeight + "px";
-
-    } else {
-      answer.style.maxHeight = null;
-    }
+      if (item.classList.contains("active")) {
+        answer.style.maxHeight = answer.scrollHeight + "px";
+      } else {
+        answer.style.maxHeight = null;
+      }
+    });
   });
-});
+}
