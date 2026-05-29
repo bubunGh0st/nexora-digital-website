@@ -161,6 +161,47 @@
   .nx-tech-grid {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  /* ========================
+    SINGLE SERVICE HERO
+  ======================== */
+
+  .nx-service-hero {
+    text-align: center;
+  }
+
+  .nx-service-hero-content h1 {
+    max-width: 100%;
+  }
+
+  .nx-service-hero-buttons,
+  .nx-service-trust {
+    justify-content: center;
+  }
+
+  .nx-service-hero-visual {
+    margin-top: 20px;
+  }
+
+  /* =================================
+   SINGLE SERVICES WHAT'S INCLUDED
+  =================================== */
+
+  .nx-included-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* ==================================
+   SINGLE SERVICES FEATURED PROJECT
+  ==================================== */
+
+  .nx-featured-project {
+    text-align: center;
+  }
+
+  .nx-project-stats {
+    justify-content: center;
+  }
   
 }
 
@@ -271,6 +312,17 @@
   .nx-why-item-icon svg {
     width: 26px;
     height: 26px;
+  }
+
+  /* ==========================
+    SINGLE SERVICE BENEFITS
+  ============================ */
+  .nx-benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nx-offset {
+    margin-top: 0;
   }
 
 }

@@ -152,6 +152,353 @@
   margin: 4px 0;
 }
 
+/* ========================
+    SINGLE SERVICE HERO
+======================== */
+
+.nx-service-hero {
+  position: relative;
+  padding:
+    calc(var(--section-padding-lg) + 40px)
+    0
+    var(--section-padding-lg);
+}
+
+/* CONTENT */
+.nx-service-hero-content h1 {
+  margin: 20px 0 24px;
+  max-width: 12ch;
+}
+
+.nx-service-hero-content p {
+  max-width: 55ch;
+}
+
+/* BUTTONS */
+.nx-service-hero-buttons {
+  display: flex;
+  gap: 18px;
+  margin-top: 35px;
+}
+
+/* TRUST */
+.nx-service-trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 35px;
+}
+
+.nx-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.nx-trust-item svg {
+  width: 18px;
+  height: 18px;
+  color: var(--secondary);
+}
+
+/* VISUAL */
+.nx-service-hero-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* IMAGE */
+.nx-service-hero-visual img {
+  position: relative;
+  z-index: 2;
+  border-radius: var(--radius-xlg);
+  box-shadow: var(--shadow-lg);
+}
+
+/* GLOW */
+.nx-service-hero-glow {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  background: var(--secondary-glow-xl);
+  filter: blur(120px);
+  opacity: 0.25;
+  border-radius: var(--radius-full);
+  z-index: 1;
+}
+
+/* ==========================
+    SINGLE SERVICE OVERVIEW
+============================ */
+
+.nx-service-overview-image img {
+  border-radius: var(--radius-xlg);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Content */
+.nx-service-overview-content h2 {
+  margin: 20px 0 24px;
+}
+
+.nx-service-overview-content p + p {
+  margin-top: 18px;
+}
+
+/* Features */
+.nx-service-overview-features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin-top: 35px;
+}
+
+.nx-overview-feature {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nx-overview-feature svg {
+  width: 20px;
+  height: 20px;
+  color: var(--secondary);
+  flex-shrink: 0;
+}
+
+/* ==========================
+    SINGLE SERVICE BENEFITS
+============================ */
+
+.nx-service-benefits {
+  position: relative;
+}
+
+/* grid */
+.nx-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-top: 70px;
+}
+
+/* Offset */
+.nx-offset {
+  margin-top: 50px;
+}
+
+/* Card */
+.nx-benefit-card {
+  position: relative;
+  padding: 35px;
+  background: var(--bg-glass);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xlg);
+  transition: var(--transition);
+  overflow: hidden;
+}
+
+/* Hover */
+.nx-benefit-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--border-blue);
+  box-shadow: var(--shadow-secondary);
+}
+
+/* Icon */
+.nx-benefit-icon {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  border-radius: var(--radius-full);
+  background: var(--secondary-glow-sm);
+  color: var(--secondary);
+}
+
+.nx-benefit-icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+/* Title */
+.nx-benefit-card h3 {
+  margin-bottom: 18px;
+}
+
+/* Text */
+.nx-benefit-card p {
+  max-width: 100%;
+}
+
+/* =================================
+   SINGLE SERVICES WHAT'S INCLUDED
+=================================== */
+
+.nx-whats-included {
+  position: relative;
+}
+
+/* Grid */
+.nx-included-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 70px;
+}
+
+/* Card */
+.nx-included-card {
+  position: relative;
+  padding: 35px;
+  background: var(--bg-glass);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xlg);
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+/* Hover */
+.nx-included-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--border-blue);
+  box-shadow: var(--shadow-secondary);
+}
+
+/* Icon */
+.nx-included-icon {
+  width: 65px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  border-radius: var(--radius-full);
+  background: var(--secondary-glow-sm);
+  color: var(--secondary);
+}
+
+.nx-included-icon svg {
+  width: 30px;
+  height: 30px;
+}
+
+/* Ttitle */
+.nx-included-card h3 {
+  margin-bottom: 24px;
+}
+
+/* List */
+.nx-included-card ul {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* List Item */
+.nx-included-card li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--text-muted);
+}
+
+/* Check Icon */
+.nx-included-card li svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  color: var(--secondary);
+}
+
+/* ==================================
+   SINGLE SERVICES FEATURED PROJECT
+==================================== */
+
+.nx-featured-project {
+  position: relative;
+}
+
+/* Box */
+.nx-featured-project-box {
+  margin-top: 70px;
+}
+
+/* Image */
+.nx-featured-project-image {
+  position: relative;
+}
+
+.nx-featured-project-image img {
+  position: relative;
+  z-index: 2;
+  border-radius: var(--radius-xlg);
+  box-shadow: var(--shadow-lg);
+  transition: var(--transition-slow);
+}
+
+/* Hover */
+.nx-featured-project-image:hover img {
+  transform: translateY(-6px);
+}
+
+/* Glow */
+.nx-featured-project-glow {
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  background: var(--secondary-glow-xl);
+  filter: blur(120px);
+  opacity: 0.2;
+  border-radius: var(--radius-full);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+/* Content */
+.nx-featured-project-content h3 {
+  margin: 18px 0 22px;
+}
+
+/* Tag */
+.nx-project-tag {
+  display: inline-flex;
+  padding: 8px 16px;
+  border-radius: 50px;
+  background: var(--secondary-glow-sm);
+  color: var(--secondary);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Stats */
+.nx-project-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 35px 0;
+}
+
+/* Single Stat */
+.nx-project-stat h4 {
+  margin-bottom: 6px;
+  font-size: 28px;
+  color: var(--secondary);
+}
+
+.nx-project-stat span {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
 /*============
   FOOTER 
 ==============*/
