@@ -1,7 +1,7 @@
 /* All Layout CSS Goes Here */
 
 /*============
-	NAVBAR 
+  NAVBAR 
 ==============*/
 .nx-navbar {
   position: fixed;
@@ -795,6 +795,239 @@
 
 .nx-project-services li {
   color: var(--text-muted);
+}
+
+/* ==========================
+    BLOG: FEATURED ARTICLE
+========================== */
+
+.nx-featured-post {
+  padding: 40px;
+  border-radius: var(--radius-xlg);
+  background: var(--bg-glass);
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+
+/* IMAGE */
+.nx-featured-post-image {
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+}
+
+.nx-featured-post-image img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+/* CONTENT */
+.nx-featured-post-content h2 {
+  margin: 18px 0;
+}
+
+.nx-featured-post-content p {
+  margin-bottom: 24px;
+}
+
+/* BADGE */
+
+.nx-featured-badge {
+  display: inline-flex;
+  padding: 6px 12px;
+  margin-right: 10px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-light);
+  background: var(--gradient-primary);
+}
+
+/* CATEGORY */
+.nx-blog-category {
+  display: inline-flex;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  color: var(--secondary);
+  background: var(--secondary-glow-sm);
+}
+
+/* META */
+.nx-blog-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.nx-blog-meta span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.nx-blog-meta svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* ========================
+    BLOG GRID
+======================== */
+
+.nx-blog-card {
+  display: block;
+  height: 100%;
+  overflow: hidden;
+  border-radius: var(--radius-xlg);
+  background: var(--bg-glass);
+  border: 1px solid var(--border);
+  transition: var(--transition-slow);
+}
+
+.nx-blog-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--border-blue);
+  box-shadow: var(--shadow-secondary);
+}
+
+/* IMAGE */
+.nx-blog-card-image {
+  overflow: hidden;
+}
+
+.nx-blog-card-image img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  transition: .5s ease;
+}
+
+.nx-blog-card:hover .nx-blog-card-image img {
+  transform: scale(1.05);
+}
+
+/* CONTENT */
+.nx-blog-card-content {
+  padding: 24px;
+}
+
+.nx-blog-card-category {
+  display: inline-flex;
+  padding: 6px 12px;
+  margin-bottom: 14px;
+  border-radius: 999px;
+  background: var(--secondary-glow-sm);
+  color: var(--secondary);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.nx-blog-card-content h3 {
+  margin-bottom: 12px;
+  font-size: var(--fs-h4);
+  line-height: 1.4;
+}
+
+.nx-blog-card-content p {
+  margin-bottom: 20px;
+}
+
+/* META */
+.nx-blog-card-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.nx-blog-card-footer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--secondary);
+  font-weight: 500;
+}
+
+.nx-blog-card-footer svg {
+  transition: var(--transition);
+}
+
+.nx-blog-card:hover .nx-blog-card-footer svg {
+  transform: translateX(5px);
+}
+
+/* ========================
+    NEWSLETTER
+======================== */
+
+.nx-newsletter {
+  overflow: hidden;
+}
+
+.nx-newsletter-box {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 60px 40px;
+  text-align: center;
+  border-radius: var(--radius-xlg);
+  background: var(--bg-glass);
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+
+/* Glow */
+.nx-newsletter-box::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  transform: translateX(-50%);
+  background: var(--secondary-glow-lg);
+  filter: blur(120px);
+  opacity: .4;
+  pointer-events: none;
+}
+
+.nx-newsletter-box h2 {
+  margin: 16px 0;
+}
+
+.nx-newsletter-box p {
+  margin: 0 auto 30px;
+}
+
+/* FORM */
+.nx-newsletter-form {
+  display: flex;
+  gap: 12px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.nx-newsletter-form input {
+  flex: 1;
+  padding: 14px 18px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: var(--bg-soft);
+  color: var(--text);
+  outline: none;
+}
+
+.nx-newsletter-form input:focus {
+  border-color: var(--border-blue);
+}
+
+.nx-newsletter-form button {
+  flex-shrink: 0;
 }
 
 /*============

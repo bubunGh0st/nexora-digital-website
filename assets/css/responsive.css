@@ -227,7 +227,7 @@
   /* ============================
     PORTFOLIO: PORTFOLIO GRID
   ============================== */
-  
+
   .nx-project-flip-inner {
     min-height: auto;
   }
@@ -368,6 +368,21 @@
   .nx-case-results {
     justify-content: center;
     text-align: center;
+  }
+
+  /* ========================
+    NEWSLETTER
+  ======================== */
+  .nx-newsletter-box {
+    padding: 40px 24px;
+  }
+
+  .nx-newsletter-form {
+    flex-direction: column;
+  }
+
+  .nx-newsletter-form button {
+    width: 100%;
   }
 
 }
