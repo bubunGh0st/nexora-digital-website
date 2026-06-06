@@ -223,6 +223,18 @@
     top: auto;
     bottom: auto;
   }
+
+  /* ============================
+    PORTFOLIO: PORTFOLIO GRID
+  ============================== */
+  
+  .nx-project-flip-inner {
+    min-height: auto;
+  }
+
+  .nx-project-flip:hover .nx-project-flip-inner {
+    transform: none;
+  }
   
 }
 
