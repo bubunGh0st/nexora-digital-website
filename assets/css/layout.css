@@ -1219,7 +1219,7 @@
 }
 
 /* ========================
-    AUTHOR BOX
+    SINGLE BLOG: AUTHOR BOX
 ======================== */
 .nx-author-box {
   display: flex;
@@ -1261,6 +1261,116 @@
   height: 1px;
   transform: translateX(-50%);
   background: var(--border-blue);
+}
+
+/* ========================
+    CONATCT: CONTACT SECTION
+======================== */
+
+.nx-contact-info h2 {
+  margin: 16px 0;
+}
+
+.nx-contact-info p {
+  margin-bottom: 30px;
+}
+
+/* INFO ITEM */
+.nx-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.nx-contact-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  background: var(--secondary-glow-sm);
+  color: var(--secondary);
+  flex-shrink: 0;
+}
+
+.nx-contact-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.nx-contact-item h4 {
+  margin-bottom: 6px;
+}
+
+/* FORM */
+.nx-contact-form {
+  padding: 32px;
+  border-radius: var(--radius-xlg);
+  background: var(--bg-glass);
+  border: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+
+.nx-contact-form::before {
+  content: "";
+  position: absolute;
+  top: -120px;
+  right: -120px;
+  width: 250px;
+  height: 250px;
+  background: var(--secondary-glow-lg);
+  filter: blur(120px);
+  opacity: .3;
+  pointer-events: none;
+}
+
+.nx-contact-form input,
+.nx-contact-form select,
+.nx-contact-form textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: var(--bg-soft);
+  color: var(--text);
+  outline: none;
+  transition: var(--transition);
+}
+
+.nx-contact-form input:focus,
+.nx-contact-form select:focus,
+.nx-contact-form textarea:focus {
+  border-color: var(--border-blue);
+}
+
+.nx-contact-form select option {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.nx-contact-form textarea {
+  resize: vertical;
+}
+
+/* ========================
+    CONTACT MAP
+======================== */
+
+.nx-map-wrapper {
+  overflow: hidden;
+  border-radius: var(--radius-xlg);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-primary);
+}
+
+.nx-map-wrapper iframe {
+  width: 100%;
+  height: 500px;
+  border: 0;
+  display: block;
 }
 
 /*============

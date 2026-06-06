@@ -401,6 +401,13 @@
     text-align: center;
   }
 
+  /* ========================
+    CONTACT MAP
+  ======================== */
+  .nx-map-wrapper iframe {
+    height: 350px;
+  }
+
 }
 
 @media (max-width: 576px) {
