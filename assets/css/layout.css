@@ -1030,6 +1030,239 @@
   flex-shrink: 0;
 }
 
+/* ================================
+    SINGLE BLOG: READING PROGRESS
+================================== */
+
+.nx-reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 4px;
+  z-index: var(--z-tooltip);
+  background: var(--gradient-primary);
+  box-shadow: 0 0 15px var(--primary-glow);
+  transition: width .1s linear;
+}
+
+/* ========================
+    SINGLE BLOG HERO
+======================== */
+
+.nx-blog-hero {
+  padding-top: 180px;
+  padding-bottom: 80px;
+  text-align: center;
+}
+
+.nx-blog-hero-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.nx-blog-hero-content h1 {
+  margin: 20px 0;
+}
+
+.nx-blog-hero-content p {
+  margin: 0 auto 30px;
+}
+
+/* META */
+.nx-blog-hero-meta {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.nx-blog-hero-meta span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.nx-blog-hero-meta svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* =============================
+    SINGLE BLOG FEATURE IMAGE
+============================== */
+.nx-blog-featured-image img {
+  width: 100%;
+  border-radius: var(--radius-xlg);
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  box-shadow: var(--shadow-lg);
+}
+
+/* ========================
+    TABLE OF CONTENTS
+======================== */
+
+.nx-toc {
+  position: sticky;
+  top: 120px;
+  padding: 24px;
+  border-radius: var(--radius-lg);
+  background: var(--bg-glass);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(12px);
+}
+
+.nx-toc h4 {
+  margin-bottom: 20px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nx-toc h4 svg {
+  width: 18px;
+  height: 18px;
+
+  color: var(--secondary);
+}
+
+/* Progress */
+.nx-toc-progress {
+  width: 100%;
+  height: 4px;
+  margin-bottom: 20px;
+  border-radius: 999px;
+  background: var(--bg-soft);
+  overflow: hidden;
+}
+
+.nx-toc-progress::before {
+  content: "";
+  display: block;
+  width: 45%;
+  height: 100%;
+  background: var(--gradient-primary);
+  border-radius: inherit;
+}
+
+/* LIST */
+.nx-toc ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* LINKS */
+.nx-toc a {
+  display: flex;
+  align-items: center;
+  padding: 10px 14px;
+  border-radius: var(--radius-md);
+  color: var(--text-muted);
+  font-size: 14px;
+  transition: var(--transition);
+}
+
+.nx-toc a:hover {
+  color: var(--text);
+  background: var(--bg-soft);
+  transform: translateX(4px);
+}
+
+/* ACTIVE */
+.nx-toc a.active {
+  color: var(--secondary);
+  background: var(--secondary-glow-sm);
+  border: 1px solid var(--border-blue);
+}
+
+/* =============================
+    SINGLE BLOG CONTENT
+============================== */
+.nx-blog-content {
+  max-width: 850px;
+}
+
+.nx-blog-content h2 {
+  margin: 50px 0 20px;
+}
+
+.nx-blog-content h3 {
+  margin: 35px 0 15px;
+}
+
+.nx-blog-content p {
+  margin-bottom: 20px;
+  max-width: none;
+}
+
+.nx-blog-content ul,
+.nx-blog-content ol {
+  margin-bottom: 24px;
+  padding-left: 20px;
+}
+
+.nx-blog-content li {
+  margin-bottom: 10px;
+}
+
+.nx-blog-content blockquote {
+  padding: 24px;
+  margin: 30px 0;
+  border-left: 4px solid var(--primary);
+  background: var(--bg-glass);
+  border-radius: var(--radius-md);
+}
+
+/* ========================
+    AUTHOR BOX
+======================== */
+.nx-author-box {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 32px;
+  border-radius: var(--radius-xlg);
+  background: var(--bg-glass);
+  border: 1px solid var(--border);
+}
+
+.nx-author-avatar img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: var(--radius-full);
+  border: 2px solid var(--border-blue);
+}
+
+.nx-author-label {
+  color: var(--secondary);
+  font-size: 14px;
+}
+
+.nx-author-content h3 {
+  margin: 8px 0 12px;
+}
+
+.nx-related-articles {
+  position: relative;
+}
+
+.nx-related-articles::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 120px;
+  height: 1px;
+  transform: translateX(-50%);
+  background: var(--border-blue);
+}
+
 /*============
   FOOTER 
 ==============*/

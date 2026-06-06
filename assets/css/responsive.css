@@ -235,6 +235,14 @@
   .nx-project-flip:hover .nx-project-flip-inner {
     transform: none;
   }
+
+
+  /* ============================
+    SINGLE BLOG
+  ============================== */
+  .nx-toc {
+    display: none;
+  }
   
 }
 
@@ -383,6 +391,14 @@
 
   .nx-newsletter-form button {
     width: 100%;
+  }
+
+  /* ========================
+    SINGLE BLOG PAGE
+  ======================== */
+  .nx-author-box {
+    flex-direction: column;
+    text-align: center;
   }
 
 }

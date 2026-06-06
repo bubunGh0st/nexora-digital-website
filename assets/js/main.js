@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   lucide.createIcons();
 
   // Init Features
+  initReadingProgress();
   initNavbar();
   initThemeToggle();
   initTestimonials();
@@ -211,5 +212,20 @@ function initFAQ() {
         answer.style.maxHeight = null;
       }
     });
+  });
+}
+
+/*======================
+  READING PROGRESS
+========================*/
+
+function initReadingProgress() {
+  const progressBar = document.querySelector(".nx-reading-progress");
+  if (!progressBar) return;
+  window.addEventListener("scroll", () => {
+    const scrollTop = window.scrollY;
+    const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = (scrollTop / documentHeight) * 100;
+    progressBar.style.width = `${progress}%`;
   });
 }
