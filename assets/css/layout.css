@@ -499,6 +499,279 @@
   font-size: 14px;
 }
 
+/* ========================
+    PORTFOLIO PAGE HERO
+======================== */
+
+.nx-portfolio-hero {
+  padding:
+    calc(var(--section-padding-lg) + 40px)
+    0
+    var(--section-padding-lg);
+  position: relative;
+}
+
+/* CONTENT */
+.nx-portfolio-hero-content h1 {
+  margin: 20px 0 24px;
+  max-width: 10ch;
+}
+
+/* STATS */
+.nx-portfolio-stats {
+  display: flex;
+  gap: 35px;
+  margin: 35px 0 40px;
+}
+
+.nx-portfolio-stat h3 {
+  color: var(--secondary);
+  margin-bottom: 5px;
+}
+
+.nx-portfolio-stat span {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+/* COLLAGE */
+.nx-portfolio-collage {
+  position: relative;
+  height: 520px;
+}
+
+/* CARD */
+.nx-collage-card {
+  position: absolute;
+  overflow: hidden;
+  border-radius: var(--radius-xlg);
+  border: 1px solid var(--border);
+  background: var(--bg-glass);
+  box-shadow: var(--shadow-lg);
+  transition: var(--transition-slow);
+}
+
+.nx-collage-card:hover {
+  transform: translateY(-8px);
+}
+
+/* IMAGE */
+.nx-collage-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* POSITIONS */
+.nx-card-1 {
+  width: 280px;
+  height: 380px;
+  left: 0;
+  top: 60px;
+  z-index: 2;
+  animation: portfolioFloat 6s ease-in-out infinite;
+}
+
+.nx-card-2 {
+  width: 260px;
+  height: 320px;
+  right: 0;
+  top: 0;
+  z-index: 3;
+  animation: portfolioFloat 7s ease-in-out infinite;
+}
+
+.nx-card-3 {
+  width: 260px;
+  height: 300px;
+  right: 120px;
+  bottom: 0;
+  z-index: 1;
+  animation: portfolioFloat 8s ease-in-out infinite;
+}
+
+@keyframes portfolioFloat {
+  0%,100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+/* GLOW */
+.nx-portfolio-glow {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  background: var(--secondary-glow-xl);
+  border-radius: var(--radius-full);
+  filter: blur(120px);
+  opacity: 0.2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* =================================
+    PORTFOLIO: FEATURED CASE STUDY
+================================== */
+
+.nx-case-study-box {
+  margin-top: 70px;
+}
+
+/* IMAGE */
+.nx-case-study-image {
+  position: relative;
+}
+
+.nx-case-study-image img {
+  position: relative;
+  z-index: 2;
+  border-radius: var(--radius-xlg);
+  box-shadow: var(--shadow-lg);
+}
+
+/* GLOW */
+.nx-case-study-glow {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  background: var(--secondary-glow-xl);
+  border-radius: var(--radius-full);
+  filter: blur(120px);
+  opacity: .2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* CONTENT */
+.nx-case-study-content h3 {
+  margin: 18px 0;
+}
+
+/* META */
+.nx-project-meta {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin: 30px 0;
+}
+
+.nx-meta-item {
+  padding: 18px;
+  background: var(--bg-glass);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.nx-meta-item span {
+  display: block;
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.nx-meta-item strong {
+  font-weight: 600;
+}
+
+/* STORY */
+.nx-case-story {
+  display: grid;
+  gap: 24px;
+  margin-bottom: 35px;
+}
+
+.nx-story-block h4 {
+  margin-bottom: 10px;
+}
+
+/* RESULTS */
+.nx-case-results {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 35px;
+}
+
+.nx-result h4 {
+  color: var(--secondary);
+  margin-bottom: 4px;
+}
+
+.nx-result span {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+/* ============================
+    PORTFOLIO: PORTFOLIO GRID
+============================== */
+
+.nx-portfolio-grid {
+  overflow: hidden;
+}
+
+/* CARD */
+.nx-project-card {
+  display: block;
+  height: 100%;
+  overflow: hidden;
+  border-radius: var(--radius-xlg);
+  background: var(--bg-glass);
+  border: 1px solid var(--border);
+  transition: var(--transition-slow);
+}
+
+.nx-project-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--border-blue);
+  box-shadow: var(--shadow-secondary);
+}
+
+/* IMAGE */
+.nx-project-image {
+  overflow: hidden;
+}
+
+.nx-project-image img {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  transition: 0.5s ease;
+}
+
+.nx-project-card:hover .nx-project-image img {
+  transform: scale(1.05);
+}
+
+/* CONTENT */
+.nx-project-content {
+  padding: 24px;
+}
+
+.nx-project-category {
+  display: inline-flex;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--secondary);
+  background: var(--secondary-glow-sm);
+  margin-bottom: 14px;
+}
+
+.nx-project-content h3 {
+  margin-bottom: 12px;
+}
+
+.nx-project-content p {
+  margin-bottom: 0;
+}
+
 /*============
   FOOTER 
 ==============*/
