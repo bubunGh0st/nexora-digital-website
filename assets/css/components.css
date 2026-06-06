@@ -371,6 +371,34 @@
 }
 
 /* ========================
+    BREADCRUMB
+======================== */
+
+.nx-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 24px;
+
+  font-size: var(--fs-small);
+
+  color: var(--text-muted);
+}
+
+.nx-breadcrumb a {
+  transition: var(--transition);
+}
+
+.nx-breadcrumb a:hover {
+  color: var(--secondary);
+}
+
+.nx-breadcrumb .active {
+  color: var(--text-light);
+}
+
+/* ========================
     PAGE HERO
 ======================== */
 
@@ -408,31 +436,6 @@
   border-radius: var(--radius-full);
 
   animation: floatGlow 10s ease-in-out infinite;
-}
-
-/* Breadcrumb */
-.nx-breadcrumb {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-
-  margin-bottom: 24px;
-
-  font-size: var(--fs-small);
-
-  color: var(--text-muted);
-}
-
-.nx-breadcrumb a {
-  transition: var(--transition);
-}
-
-.nx-breadcrumb a:hover {
-  color: var(--secondary);
-}
-
-.nx-breadcrumb .active {
-  color: var(--text-light);
 }
 
 /* Content */

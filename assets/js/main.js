@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   // Load Components
   await loadComponent("navbar", "components/navbar.html");
   await loadComponent("pageHero", "components/page-hero.html");
+  await loadComponent("breadcrumb", "components/breadcrumb.html");
   await loadComponent("testimonials", "components/testimonials.html");
   await loadComponent("faq", "components/faq.html");
   await loadComponent("cta", "components/cta-section.html");
