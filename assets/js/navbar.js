@@ -63,4 +63,17 @@ function initNavbar() {
       });
     });
   }
+
+  /* Sub Menu */
+  const serviceMenu = document.querySelector(".nx-has-submenu");
+  const serviceLink = document.querySelector(".nx-menu-parent");
+  if (serviceMenu && serviceLink) {
+    serviceLink.addEventListener("click", function (e) {
+      if (window.innerWidth <= 992) {
+        e.preventDefault();
+        serviceMenu.classList.toggle("active");
+      }
+    });
+  }
 }
+

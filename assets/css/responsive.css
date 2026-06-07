@@ -41,6 +41,37 @@
     font-size: 22px;
   }
 
+  /* Sub Menu */
+  .nx-submenu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    background: transparent;
+    padding: 15px 0 0;
+    display: none;
+  }
+
+  .nx-has-submenu.active .nx-submenu {
+    display: block;
+  }
+
+  .nx-submenu a {
+    font-size: 18px;
+  }
+
+  .nx-has-submenu ul {
+    gap: 10px;
+  }
+
+  .nx-has-submenu:hover .nx-menu-parent svg {
+    transform: none;
+  }
+
+  .nx-has-submenu.active .nx-menu-parent svg {
+    transform: rotate(180deg);
+  }
+
   /* Show Hamburger */
   .nx-menu-toggle {
     display: flex;

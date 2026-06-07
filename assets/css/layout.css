@@ -1,7 +1,7 @@
 /* All Layout CSS Goes Here */
 
 /*============
-  NAVBAR 
+	NAVBAR 
 ==============*/
 .nx-navbar {
   position: fixed;
@@ -101,6 +101,80 @@
 
 .nx-nav-menu a.active::after {
   width: 100%;
+}
+
+/*======================
+    SUBMENU
+========================*/
+
+.nx-has-submenu {
+  position: relative;
+}
+
+/* Dropdown */
+.nx-submenu {
+  position: absolute;
+  top: 120%;
+  left: 0;
+  min-width: 270px;
+  background: var(--overlay-blue-deep);
+  border: 1px solid var(--glass-soft);
+  border-radius: var(--radius-md);
+  padding: 10px 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all var(--transition);
+  z-index: var(--z-menu);
+  flex-direction: column;
+}
+
+.nx-menu-parent {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nx-menu-parent svg {
+  width: 14px;
+  height: 14px;
+  transition: transform var(--transition);
+}
+
+.nx-has-submenu:hover .nx-menu-parent svg {
+  transform: rotate(180deg);
+}
+
+/* Show */
+.nx-has-submenu:hover .nx-submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Links */
+.nx-has-submenu ul {
+  gap: 10px;
+}
+
+.nx-submenu li {
+  width: 100%;
+}
+
+.nx-submenu a {
+  display: block;
+  padding: 5px 20px;
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+.nx-submenu a:hover {
+  background: var(--bg-soft);
+}
+
+/* Disable underline in dropdown */
+.nx-submenu a::after {
+  display: none;
 }
 
 /* Right Side */
