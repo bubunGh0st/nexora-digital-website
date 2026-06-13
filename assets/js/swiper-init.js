@@ -1,29 +1,35 @@
 /* Swiper JS Goes Here */
 
-new Swiper(".nx-testimonial-slider", {
-  loop: true,
-  spaceBetween: 30,
+/*======================
+    TESTIMONIALS
+========================*/
 
-  autoplay: {
-    delay: 4000,
-    disableOnInteraction: false,
-    pauseOnMouseEnter: true,
-  },
+function initTestimonials() {
 
-  navigation: {
-    nextEl: ".nx-testimonial-next",
-    prevEl: ".nx-testimonial-prev",
-  },
+  if (!document.querySelector(".nx-testimonial-slider")) return;
 
-  breakpoints: {
-    0: {
-      slidesPerView: 1
+  new Swiper(".nx-testimonial-slider", {
+
+    loop: true,
+    spaceBetween: 30,
+
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
     },
-    768: {
-      slidesPerView: 2
+
+    navigation: {
+      nextEl: ".nx-testimonial-next",
+      prevEl: ".nx-testimonial-prev",
     },
-    992: {
-      slidesPerView: 3
+
+    breakpoints: {
+      0: { slidesPerView: 1 },
+      768: { slidesPerView: 2 },
+      992: { slidesPerView: 3 }
     }
-  }
-});
+
+  });
+
+}

@@ -1,25 +1,58 @@
-/* Theme Toggle JS Goes Here */
+/* THEME TOGGEL BUTTON ACTION & ANIMATION CODE HERE */
 
 function initThemeToggle() {
-  // Theme Toggle
+
   const toggle = document.getElementById("themeToggle");
 
-  if (!toggle) return; // safety
+  if (!toggle) return;
+
+  const savedTheme = localStorage.getItem("theme") || "dark";
+  document.documentElement.setAttribute( "data-theme", savedTheme );
+
+  updateThemeIcon(savedTheme);
+  updateThemeLogo(savedTheme);
 
   toggle.addEventListener("click", () => {
-    document.body.classList.toggle("light");
 
-    const icon = toggle.querySelector("i");
+    const currentTheme = document.documentElement.getAttribute("data-theme");
+    const newTheme = currentTheme === "dark" ? "light" : "dark";
 
-    if (!icon) return;
+    document.documentElement.setAttribute( "data-theme", newTheme );
+    localStorage.setItem( "theme", newTheme );
 
-    if (document.body.classList.contains("light")) {
-      icon.setAttribute("data-lucide", "sun");
-    } else {
-      icon.setAttribute("data-lucide", "moon");
-    }
-
-    lucide.createIcons();
+    updateThemeIcon(newTheme);
+    updateThemeLogo(newTheme);
+    
   });
 }
 
+function updateThemeIcon(theme) {
+
+  const icon = document.querySelector("#themeToggle svg");
+
+  if (!icon) return;
+
+  icon.setAttribute( "data-lucide", theme === "dark" ? "sun" : "moon" );
+  lucide.createIcons();
+
+}
+
+function updateThemeLogo(theme) {
+
+  const logos = document.querySelectorAll(".nx-theme-logo");
+
+  logos.forEach(logo => {
+
+    logo.src = theme === "light" ? logo.dataset.light : logo.dataset.dark;
+
+  });
+}
+
+const savedTheme = localStorage.getItem("theme");
+
+if (!savedTheme) {
+
+  const prefersDark = window.matchMedia( "(prefers-color-scheme: dark)" ).matches;
+  document.documentElement.setAttribute( "data-theme", prefersDark ? "dark" : "light" );
+
+}

@@ -5,7 +5,9 @@
 .mb-3 { margin-bottom: 24px; }
 .d-flex { display: flex; }
 
-/* SECTION BACKGROUNDS */
+/*=============================================
+    SECTION BACKGROUNDS 
+=============================================*/
 .nx-section-dark {
   background: var(--bg);
 }
@@ -18,7 +20,9 @@
   background: var(--bg-soft);
 }
 
-/* SECTION SPACING */
+/*=============================================
+    SECTION SPACING 
+=============================================*/
 .nx-section {
   padding: var(--section-padding-md) 0;
 }
@@ -46,14 +50,16 @@
  	margin: 0 auto 40px;
 }
 
-/* WHATSAAP FLOATING BUTTON */
+/*=============================================
+    WHATSAAP FLOATING BUTTON
+=============================================*/
 .nx-whatsapp-btn {
   position: fixed;
   bottom: 20px;
   left: 20px;
   width: 55px;
   height: 55px;
-  background: #25D366;
+  background: var(--whatsapp-button);
   color: var(--text);
   align-items: center;
   justify-content: center;
@@ -83,27 +89,23 @@
   animation: whatsappPulse 2s infinite;
 }
 
-/* SCROLL TO TOP FLOATING BUTTON */
+/*=============================================
+    SCROLL TO TOP FLOATING BUTTON 
+=============================================*/
 .nx-scroll-top {
   position: fixed;
   bottom: 20px;
   right: 20px;
-
   width: 60px;
   height: 60px;
-
   background: transparent;
   border: none;
-
   align-items: center;
   justify-content: center;
-
   cursor: pointer;
   z-index: var(--z-header);
-
   opacity: 0;
   visibility: hidden;
-
   transition: var(--transition);
 }
 
@@ -131,10 +133,8 @@
   stroke: var(--primary);
   stroke-width: 3;
   stroke-linecap: round;
-
   stroke-dasharray: 163.36;
   stroke-dashoffset: 163.36;
-
   transition: stroke-dashoffset 0.2s linear;
   filter: drop-shadow(0 0 6px var(--border-blue));
 }
@@ -143,18 +143,13 @@
 .nx-scroll-icon {
   width: 45px;
   height: 45px;
-
   background: var(--bg-soft);
   border: 1px solid var(--border);
-
   border-radius: var(--radius-full);
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   backdrop-filter: blur(10px);
-
   transition: var(--transition);
 }
 

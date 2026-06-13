@@ -1,8 +1,8 @@
 /* All Components CSS Goes Here */
 
-/*======================
-  CTA BUTTON PRIMARY
-========================*/
+/*=============================================
+    CTA BUTTON PRIMARY
+=============================================*/
 .nx-btn-primary {
   padding: 10px 18px;
   border-radius: var(--radius-md);
@@ -17,14 +17,15 @@
   box-shadow: 0 0 20px var(--primary-glow);
 }
 
-/*======================
-  CTA BUTTON SECONDARY
-========================*/
+/*=============================================
+    CTA BUTTON SECONDARY
+=============================================*/
 .nx-btn-secondary {
   padding: 10px 18px;
   border-radius: var(--radius-md);
   border: 1px solid var(--border);
   transition: var(--transition);
+  background: transparent;
 }
 
 .nx-btn-secondary:hover {
@@ -33,9 +34,9 @@
   box-shadow: 0 0 20px var(--bg-soft);
 }
 
-/*======================
-  HEADING DIVIDER
-========================*/
+/*=============================================
+    HEADING DIVIDER
+=============================================*/
 /* Divider base */
 .nx-divider {
   position: relative;
@@ -84,18 +85,15 @@
   height: 4px;
   transform: translateY(-50%);
   border-radius: 10px;
-
   background: linear-gradient(
     90deg,
     transparent,
     var(--secondary),
     transparent
   );
-
   filter: blur(2px);
   animation: nx-flow 2.5s ease-in-out infinite;
 }
-
 /* Animation */
 @keyframes nx-flow {
   0% {
@@ -117,9 +115,9 @@
   }
 }
 
-/*======================
-  TESTIMONIALS
-========================*/
+/*=============================================
+    TESTIMONIALS
+=============================================*/
 /* Card Breathing Space */
 .nx-testimonials .swiper {
   padding: 15px 15px;
@@ -223,9 +221,9 @@
   color: var(--text);
 }
 
-/*======================
-  CTA SECTION
-========================*/
+/*=============================================
+    CTA SECTION
+=============================================*/
 /* CTA Base */
 .nx-cta {
   position: relative;
@@ -301,7 +299,6 @@
     transform: translate(60px, 30px) scale(1.1);
   }
 }
-
 @keyframes floatGlow2 {
   0%, 100% {
     transform: translate(0, 0) scale(1);
@@ -311,21 +308,17 @@
   }
 }
 
-/* ========================
+/*=============================================
     LOADER
-======================== */
+=============================================*/
 .nx-loader {
   position: fixed;
   inset: 0;
-
   background: var(--bg-dark);
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   z-index: 99999;
-
   transition: opacity 0.6s ease,
               visibility 0.6s ease;
 }
@@ -338,51 +331,38 @@
 .nx-loader-logo {
   width: 80px;
   height: 80px;
-
   border-radius: var(--radius-full);
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   background: var(--gradient-primary);
-
   font-family: var(--font-heading);
   font-size: 32px;
   font-weight: 700;
-
   color: white;
-
   box-shadow: 0 0 40px var(--primary-glow);
-
   animation: pulseLoader 2s infinite ease-in-out;
 }
-
 @keyframes pulseLoader {
   0%, 100% {
     transform: scale(1);
     box-shadow: 0 0 30px var(--primary-glow);
   }
-
   50% {
     transform: scale(1.05);
     box-shadow: 0 0 50px var(--secondary-glow-xl);
   }
 }
 
-/* ========================
+/*=============================================
     BREADCRUMB
-======================== */
-
+=============================================*/
 .nx-breadcrumb {
   display: flex;
   align-items: center;
   gap: 10px;
-
   margin-bottom: 24px;
-
   font-size: var(--fs-small);
-
   color: var(--text-muted);
 }
 
@@ -398,49 +378,102 @@
   color: var(--text-light);
 }
 
-/* ========================
+/*=============================================
     PAGE HERO
-======================== */
-
+=============================================*/
 .nx-page-hero {
   position: relative;
   padding: 180px 0 100px;
-
   background:
     radial-gradient(
       circle at top right,
-      var(--secondary-glow-md),
+      rgba(47,128,237,.18),
       transparent 35%
     ),
-    var(--bg);
-
+    radial-gradient(
+      circle at bottom left,
+      rgba(86,204,242,.10),
+      transparent 35%
+    ),
+    linear-gradient(
+      180deg,
+      #0d2237,
+      var(--bg)
+    );
   overflow: hidden;
+}
+
+.nx-page-hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 120px;
+  background:
+    linear-gradient(
+      to bottom,
+      transparent,
+      var(--bg)
+    );
+  pointer-events: none;
+}
+
+/* Network Canvas */
+#pageHeroCanvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  pointer-events: none;
+  z-index: 1;
+  transform: scale(1.05);
 }
 
 /* Glow Blob */
 .nx-page-hero-glow {
   position: absolute;
-
   top: -120px;
   right: -120px;
-
-  width: 350px;
-  height: 350px;
-
+  width: 500px;
+  height: 500px;
   background: var(--gradient-primary);
-
-  opacity: 0.15;
-
+  opacity: 0.25;
   filter: blur(120px);
-
   border-radius: var(--radius-full);
-
   animation: floatGlow 10s ease-in-out infinite;
+  z-index: 2;
+}
+
+.glow-2{
+  left:-150px;
+  bottom:-150px;
+  width:400px;
+  height:400px;
+  background:var(--secondary);
+  opacity:.12;
+  filter:blur(140px);
 }
 
 /* Content */
+.nx-page-hero .container {
+  position: relative;
+  z-index: 3;
+}
+
 .nx-page-hero-content {
   max-width: 700px;
+}
+
+.nx-page-label{
+  display:inline-flex;
+  padding:8px 16px;
+  background:var(--bg-soft);
+  border:1px solid var(--glass-soft);
+  border-radius:999px;
+  margin-bottom:20px;
+  font-size:14px;
 }
 
 .nx-page-hero-content h1 {
@@ -449,7 +482,6 @@
 
 .nx-page-hero-content h1 span {
   background: var(--gradient-primary);
-
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -458,16 +490,15 @@
   font-size: 18px;
 }
 
-/* ========================
-   FAQ
-========================== */
-
+/*=============================================
+    FAQ
+=============================================*/
 .nx-faq-wrapper {
   max-width: 900px;
   margin: 70px auto 0;
 }
 
-/* ITEM */
+/* Item */
 .nx-faq-item {
   margin-bottom: 20px;
   background: var(--bg-glass);
@@ -482,12 +513,12 @@
   border-color: var(--border-blue);
 }
 
-/* ACTIVE */
+/* Active */
 .nx-faq-item.active {
   box-shadow: var(--shadow-secondary);
 }
 
-/* QUESTION */
+/* Question */
 .nx-faq-question {
   width: 100%;
   display: flex;
@@ -505,7 +536,7 @@
   font-weight: 600;
 }
 
-/* ICON */
+/* Icon */
 .nx-faq-question svg {
   width: 22px;
   height: 22px;
@@ -513,12 +544,12 @@
   transition: var(--transition);
 }
 
-/* ROTATE */
+/* Rotate */
 .nx-faq-item.active .nx-faq-question svg {
   transform: rotate(45deg);
 }
 
-/* ANSWER */
+/* Answer */
 .nx-faq-answer {
   max-height: 0;
   overflow: hidden;
@@ -531,4 +562,53 @@
 .nx-faq-answer p {
   padding-bottom: 24px;
   max-width: 100%;
+}
+
+/*=============================================
+    TEAM SECTION
+=============================================*/
+.nx-team-card {
+  overflow: hidden;
+  height: 100%;
+  border-radius: var(--radius-xlg);
+  background: var(--bg-glass);
+  border: 1px solid var(--border);
+  transition: var(--transition-slow);
+}
+
+.nx-team-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--border-blue);
+  box-shadow: var(--shadow-secondary);
+}
+
+.nx-team-image {
+  overflow: hidden;
+}
+
+.nx-team-image img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  transition: .5s ease;
+}
+
+.nx-team-card:hover .nx-team-image img {
+  transform: scale(1.05);
+}
+
+.nx-team-content {
+  padding: 24px;
+}
+
+.nx-team-content h3 {
+  margin-bottom: 6px;
+}
+
+.nx-team-content span {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: var(--secondary);
+  font-size: 14px;
+  font-weight: 500;
 }

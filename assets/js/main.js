@@ -3,7 +3,6 @@
 /*======================
     COMPONENT LOADER
 ========================*/
-
 document.addEventListener("DOMContentLoaded", async () => {
 
   // Load Components
@@ -11,15 +10,22 @@ document.addEventListener("DOMContentLoaded", async () => {
   await loadComponent("pageHero", "components/page-hero.html");
   await loadComponent("breadcrumb", "components/breadcrumb.html");
   await loadComponent("testimonials", "components/testimonials.html");
+  await loadComponent("team", "components/team.html");
   await loadComponent("faq", "components/faq.html");
   await loadComponent("cta", "components/cta-section.html");
   await loadComponent("footer", "components/footer.html");
+
+  updateThemeLogo(
+    document.documentElement.getAttribute("data-theme")
+  );
 
   // Init Global Icons
   lucide.createIcons();
 
   // Init Features
   initReadingProgress();
+  initHomeHeroCanvas();
+  initPageHeroCanvas();
   initNavbar();
   initThemeToggle();
   initTestimonials();
@@ -33,7 +39,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 /*======================
     LOAD COMPONENT
 ========================*/
-
 async function loadComponent(id, file) {
 
   const element = document.getElementById(id);
@@ -44,7 +49,6 @@ async function loadComponent(id, file) {
 
     const response = await fetch(file);
     const data = await response.text();
-
     element.innerHTML = data;
 
   } catch (error) {
@@ -52,75 +56,37 @@ async function loadComponent(id, file) {
     console.error(`Error loading ${file}:`, error);
 
   }
-
-}
-
-/*======================
-    TESTIMONIALS
-========================*/
-
-function initTestimonials() {
-
-  if (!document.querySelector(".nx-testimonial-slider")) return;
-
-  new Swiper(".nx-testimonial-slider", {
-
-    loop: true,
-    spaceBetween: 30,
-
-    autoplay: {
-      delay: 4000,
-      disableOnInteraction: false,
-      pauseOnMouseEnter: true,
-    },
-
-    navigation: {
-      nextEl: ".nx-testimonial-next",
-      prevEl: ".nx-testimonial-prev",
-    },
-
-    breakpoints: {
-      0: { slidesPerView: 1 },
-      768: { slidesPerView: 2 },
-      992: { slidesPerView: 3 }
-    }
-
-  });
-
 }
 
 /*======================
   ABOUT SECTION COUNTER
 ========================*/
-const counters = document.querySelectorAll(".nx-counter");
-
 const startCounter = (entry) => {
-  if (entry.isIntersecting) {
-    counters.forEach(counter => {
-      let target = +counter.getAttribute("data-target");
-      let count = 0;
-      let speed = target / 50;
+  if (!entry.isIntersecting) return;
+  const counters = document.querySelectorAll(".nx-counter");
+  counters.forEach(counter => {
+    let target = +counter.getAttribute("data-target");
+    let count = 0;
+    let speed = target / 50;
 
-      const update = () => {
-        count += speed;
-        if (count < target) {
-          counter.innerText = Math.floor(count);
-          requestAnimationFrame(update);
-        } else {
-          counter.innerText = target;
-        }
-      };
-
-      update();
-    });
-  }
+    const update = () => {
+      count += speed;
+      if (count < target) {
+        counter.innerText = Math.floor(count);
+        requestAnimationFrame(update);
+      } else {
+        counter.innerText = target;
+      }
+    };
+    update();
+  });
 };
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(startCounter);
 }, { threshold: 0.5 });
 
-document.querySelectorAll(".nx-about-stats").forEach(section => {
+document.querySelectorAll(".nx-about-stats, .nx-home-about-stats").forEach(section => {
   observer.observe(section);
 });
 
@@ -181,12 +147,11 @@ window.addEventListener("load", () => {
 /* ======================
     FAQ
 ====================== */
-
 function initFAQ() {
 
   const faqItems = document.querySelectorAll(".nx-faq-item");
 
-  // OPEN DEFAULT ACTIVE ITEM
+  // Poen Default Active Item
   const activeItem = document.querySelector(".nx-faq-item.active");
 
   if (activeItem) {
@@ -218,7 +183,6 @@ function initFAQ() {
 /*======================
   READING PROGRESS
 ========================*/
-
 function initReadingProgress() {
   const progressBar = document.querySelector(".nx-reading-progress");
   if (!progressBar) return;

@@ -1,12 +1,12 @@
 /* All Sections CSS Goes Here */
 
-/*======================
-  HERO SECTION
-========================*/
+/*=============================================
+    HERO SECTION
+=============================================*/
 .nx-hero {
-  min-height: 100vh;
-  background: radial-gradient(circle at 20% 20%, #0f2a44, var(--bg-dark));
-  padding-top: 100px;
+	min-height: 100vh;
+	background: radial-gradient(circle at 20% 20%, #0f2a44, var(--bg-dark));
+	padding-top: 100px;
 }
 
 .nx-hero .row {
@@ -19,49 +19,49 @@
   max-width: 620px;
 }
 .nx-hero-content h1 {
-  font-weight: 700;
-  color: var(--text-light);
-  margin-bottom: 20px;
-  }
+	font-weight: 700;
+	color: var(--text-light);
+	margin-bottom: 20px;
+	}
 
 .nx-hero-content p {
-  font-size: 18px;
-  margin-bottom: 30px;
+	font-size: 18px;
+	margin-bottom: 30px;
 }
 
 /* CTA */
 .nx-hero-cta {
-  gap: 15px;
+ 	gap: 15px;
 }
 
 /* Visual */
 .nx-hero-visual {
-  position: relative;
-  width: 100%;
-  height: min(700px, 75vh);
+	position: relative;
+	width: 100%;
+	height: min(700px, 75vh);
 }
 
 #networkCanvas {
-  width: 100%;
-  height: 100%;
-  display: block;
+	width: 100%;
+	height: 100%;
+	display: block;
 }
 
-/*======================
-  SERVICES SECTION
-========================*/
+/*=============================================
+    HOME: SERVICES SECTION
+=============================================*/
 /* Card */
 .nx-service-card {
-  display: block;
-  background: var(--bg-glass);
-  border: 1px solid var(--bg-soft);
-  padding: 30px;
-  border-radius: var(--radius-lg);
-  transition: var(--transition);
-  height: 100%;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
+	display: block;
+	background: var(--bg-glass);
+	border: 1px solid var(--bg-soft);
+	padding: 30px;
+	border-radius: var(--radius-lg);
+	transition: var(--transition);
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
 }
 
 /* Gradient border layer */
@@ -144,9 +144,9 @@
   color: var(--text-dark);
 }
 
-/*======================
-  HOME ABOUT SECTION
-========================*/
+/*=============================================
+    HOME: ABOUT SECTION
+=============================================*/
 /* Points */
 .nx-about-item {
   gap: 15px;
@@ -162,7 +162,7 @@
 }
 
 .nx-about-content {
-  max-width: 400px;
+	max-width: 400px;
 }
 
 /* Text */
@@ -189,27 +189,29 @@
   border-radius: var(--radius-lg);
   padding: 25px;
   transition: transform var(--transition),
-              border-color var(--transition),
-              box-shadow var(--transition);
+  						border-color var(--transition),
+  						box-shadow var(--transition);
   will-change: transform;
 }
+
 .nx-stat-inner {
-  transition: transform var(--transition);
+	transition: transform var(--transition);
 }
 
 /* Hover */
 .nx-stat-card:hover {
-  transform: translateY(-5px) scale(1.02);
+	transform: translateY(-5px) scale(1.02);
   border-color: var(--secondary);
   box-shadow: var(--shadow-soft);
 }
+
 .nx-stat-card:hover .nx-stat-inner {
-  transform: translateY(-5px) scale(1.02);
+	transform: translateY(-5px) scale(1.02);
 }
 
 /* Numbers */
 .nx-stat-card h3 {
-  font-size: 32px;
+	font-size: 32px;
   color: var(--secondary);
   margin-bottom: 5px;
 }
@@ -219,9 +221,9 @@
   font-size: var(--fs-small);
 }
 
-/*======================
-  PORTFOLIO SECTION
-========================*/
+/*=============================================
+    HOME: PORTFOLIO SECTION
+=============================================*/
 /* Card */
 .nx-portfolio-card {
   position: relative;
@@ -251,11 +253,11 @@
   position: absolute;
   inset: 0;
   background: linear-gradient(
-              to top,
-              var(--overlay-blue-dark),
-              var(--overlay-blue-light),
-              var(--overlay-blue-fade)
-            );
+					    to top,
+					    var(--overlay-blue-dark),
+					    var(--overlay-blue-light),
+					    var(--overlay-blue-fade)
+					  );
   flex-direction: column;
   justify-content: flex-end;
   padding: 25px;
@@ -278,7 +280,7 @@
   font-size: var(--fs-small);
 }
 
-/* ARROW */
+/* Arrow */
 .nx-portfolio-arrow {
   position: absolute;
   top: 20px;
@@ -286,7 +288,7 @@
   color: var(--secondary);
 }
 
-/* HOVER EFFECT */
+/* Hover Effect */
 .nx-portfolio-card:hover img {
   transform: scale(1.1);
   filter: brightness(0.7);
@@ -296,14 +298,11 @@
   opacity: 1;
 }
 
-/* ========================
-   ABOUT PAGE START HERE
-======================== */
+/* ABOUT PAGE START HERE */
 
-/* ========================
-   ABOUT PAGE: ABOUT STORY
-======================== */
-
+/*=============================================
+    ABOUT PAGE: ABOUT STORY
+=============================================*/
 .nx-about-story {
   background: var(--bg);
 }
@@ -328,7 +327,6 @@
       var(--overlay-blue-transparent),
       var(--overlay-blue-light)
     );
-
   z-index: 1;
 }
 
@@ -366,10 +364,10 @@
   position: relative;
 }
 
-/* ========================
-   ABOUT PAGE: WHY CHOOSE US
-======================== */
 
+/*=============================================
+    ABOUT PAGE: WHY CHOOSE US
+=============================================*/
 .nx-why-card {
   height: 100%;
   padding: 35px;
@@ -407,10 +405,9 @@
   margin-bottom: 16px;
 }
 
-/* ============================
-   ABOUT PAGE: MISSION / VISION
-=============================== */
-
+/*=============================================
+    ABOUT PAGE: MISSION / VISION
+=============================================*/
 .nx-mission-card {
   height: 100%;
   padding: 45px 35px;
@@ -448,10 +445,9 @@
   margin-bottom: 18px;
 }
 
-/* ========================
-   ABOUT PAGE: PROCESS
-======================== */
-
+/*=============================================
+    ABOUT PAGE: PROCESS
+=============================================*/
 .nx-process {
   position: relative;
 }
@@ -507,10 +503,9 @@
   margin-bottom: 16px;
 }
 
-/* ========================
-    FOUNDER
-======================== */
-
+/*=============================================
+    ABOUT PAGE: FOUNDER
+=============================================*/
 #nx-founder .nx-divider {
   margin: 20px 30px;
 }
@@ -590,24 +585,68 @@
   margin-bottom: 24px;
 }
 
-/* =================================
+/*=============================================
     SERVICES PAGE: SERVICES INTRO
-==================================*/
+=============================================*/
+.nx-services-intro {
+  position: relative;
+  margin-top: -100px;
+  z-index: 2;
+}
+
+.nx-intro-card {
+  padding: 60px;
+  background: var(--backgroud-dark-blue);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  box-shadow: var(--shadow-xlg);
+  overflow: hidden;
+  position: relative;
+}
+
+.nx-intro-card::before {
+  content: "";
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  top: -100px;
+  right: -100px;
+  background: var(--primary);
+  opacity: 0.15;
+  filter: blur(100px);
+  border-radius: 50%;
+}
+
+.nx-intro-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.nx-intro-features span {
+  padding: 10px 16px;
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 14px;
+}
 
 .nx-services-intro-content p {
   max-width: 100%;
 }
 
-/* ========================
-    SERVICES: WHY NEXORA
-=========================== */
-
+/*=============================================
+    SERVICES PAGE: WHY NEXORA
+=============================================*/
 .nx-why-list {
   max-width: 900px;
   margin: 60px auto 0;
 }
 
-/* ITEM */
+/* Item */
 .nx-why-item {
   display: flex;
   align-items: flex-start;
@@ -631,7 +670,7 @@
   transform: translateX(8px);
 }
 
-/* ICON */
+/* Icon */
 .nx-why-item-icon {
   flex-shrink: 0;
   width: 70px;
@@ -650,7 +689,7 @@
   height: 30px;
 }
 
-/* CONTENT */
+/* Content */
 .nx-why-item-content h3 {
   margin-bottom: 12px;
 }
@@ -659,15 +698,14 @@
   max-width: 100%;
 }
 
-/* ============================
-    SERVICES: SERVICE PROCESS
-=============================== */
-
+/*=============================================
+    SERVICES PAGE: SERVICE PROCESS
+=============================================*/
 .nx-service-process {
   position: relative;
 }
 
-/* WRAPPER */
+/* Wrapper */
 .nx-process-wrapper {
   position: relative;
   display: grid;
@@ -676,31 +714,39 @@
   margin-top: 70px;
 }
 
-/* LINE */
 .nx-process-line {
   position: absolute;
   top: 30px;
   left: 0;
   right: 0;
   height: 2px;
-  background:
-    linear-gradient(
-      to right,
-      var(--primary),
-      var(--secondary)
-    );
-  opacity: 0.3;
-  z-index: 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--primary),
+    var(--secondary),
+    transparent
+  );
+  background-size: 200% 100%;
+  animation: processFlow 5s linear infinite;
+}
+@keyframes processFlow {
+  from {
+    background-position: 200% 0;
+  }
+  to {
+    background-position: -200% 0;
+  }
 }
 
-/* STEP */
+/* Step */
 .nx-process-step {
   position: relative;
   z-index: 1;
   padding-top: 60px;
 }
 
-/* DOT */
+/* Dot */
 .nx-process-dot {
   position: absolute;
   top: 20px;
@@ -714,7 +760,26 @@
     0 0 25px var(--secondary-glow-xl);
 }
 
-/* NUMBER */
+.nx-process-dot::after {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  border: 1px solid var(--secondary);
+  animation: pulseDot 2s infinite;
+}
+@keyframes pulseDot {
+  0% {
+    transform: scale(1);
+    opacity: .8;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+/* Number */
 .nx-process-count {
   display: inline-block;
   margin-bottom: 18px;
@@ -724,25 +789,24 @@
   color: var(--secondary);
 }
 
-/* TITLE */
+/* Title */
 .nx-process-step h3 {
   margin-bottom: 16px;
 }
 
-/* TEXT */
+/* Text */
 .nx-process-step p {
   max-width: 100%;
 }
 
-/* ========================
-    SERVICES: TECH STACK
-=========================== */
-
+/*=============================================
+    SERVICES PAGE: TECH STACK
+=============================================*/
 .nx-tech-stack {
   position: relative;
 }
 
-/* GRID */
+/* Grid */
 .nx-tech-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -750,7 +814,7 @@
   margin-top: 70px;
 }
 
-/* ITEM */
+/* Item */
 .nx-tech-item {
   position: relative;
   display: flex;
@@ -765,8 +829,7 @@
   transition: var(--transition);
   animation: techFloat 4s ease-in-out infinite;
 }
-
-/* FLOAT ANIMATION */
+/* Float Animation */
 @keyframes techFloat {
 
   0%, 100% {
@@ -824,7 +887,7 @@
   box-shadow: var(--shadow-secondary);
 }
 
-/* LOGO */
+/* Logo */
 .nx-tech-item img {
   width: 55px;
   height: 55px;
@@ -836,9 +899,641 @@
   transform: scale(1.08);
 }
 
-/* LABEL */
+/* Label */
 .nx-tech-item span {
   font-size: 15px;
   font-weight: 500;
   color: var(--text-light);
+}
+
+/*=============================================
+    PORTFOLIO PAGE: HERO
+=============================================*/
+.nx-portfolio-hero {
+  padding:
+    calc(var(--section-padding-lg) + 40px)
+    0
+    var(--section-padding-lg);
+  position: relative;
+}
+
+/* Content */
+.nx-portfolio-hero-content h1 {
+  margin: 20px 0 24px;
+  max-width: 10ch;
+}
+
+/* Stats */
+.nx-portfolio-stats {
+  display: flex;
+  gap: 35px;
+  margin: 35px 0 40px;
+}
+
+.nx-portfolio-stat h3 {
+  color: var(--secondary);
+  margin-bottom: 5px;
+}
+
+.nx-portfolio-stat span {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+/* Collage */
+.nx-portfolio-collage {
+  position: relative;
+  height: 520px;
+}
+
+/* Card */
+.nx-collage-card {
+  position: absolute;
+  overflow: hidden;
+  border-radius: var(--radius-xlg);
+  border: 1px solid var(--border);
+  background: var(--bg-glass);
+  box-shadow: var(--shadow-lg);
+  transition: var(--transition-slow);
+}
+
+.nx-collage-card:hover {
+  transform: translateY(-8px);
+}
+
+/* Image */
+.nx-collage-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Positions */
+.nx-card-1 {
+  width: 280px;
+  height: 380px;
+  left: 0;
+  top: 60px;
+  z-index: 2;
+  animation: portfolioFloat 6s ease-in-out infinite;
+}
+
+.nx-card-2 {
+  width: 260px;
+  height: 320px;
+  right: 0;
+  top: 0;
+  z-index: 3;
+  animation: portfolioFloat 7s ease-in-out infinite;
+}
+
+.nx-card-3 {
+  width: 260px;
+  height: 300px;
+  right: 120px;
+  bottom: 0;
+  z-index: 1;
+  animation: portfolioFloat 8s ease-in-out infinite;
+}
+
+@keyframes portfolioFloat {
+  0%,100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+/* Glow */
+.nx-portfolio-glow {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  background: var(--secondary-glow-xl);
+  border-radius: var(--radius-full);
+  filter: blur(120px);
+  opacity: 0.2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*=============================================
+    PORTFOLIO PAGE: FEATURED CASE STUDY
+=============================================*/
+.nx-case-study-box {
+  margin-top: 70px;
+}
+
+/* Image */
+.nx-case-study-image {
+  position: relative;
+}
+
+.nx-case-study-image img {
+  position: relative;
+  z-index: 2;
+  border-radius: var(--radius-xlg);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Glow */
+.nx-case-study-glow {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  background: var(--secondary-glow-xl);
+  border-radius: var(--radius-full);
+  filter: blur(120px);
+  opacity: .2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Content */
+.nx-case-study-content h3 {
+  margin: 18px 0;
+}
+
+/* Meta */
+.nx-project-meta {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin: 30px 0;
+}
+
+.nx-meta-item {
+  padding: 18px;
+  background: var(--bg-glass);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.nx-meta-item span {
+  display: block;
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.nx-meta-item strong {
+  font-weight: 600;
+}
+
+/* Story */
+.nx-case-story {
+  display: grid;
+  gap: 24px;
+  margin-bottom: 35px;
+}
+
+.nx-story-block h4 {
+  margin-bottom: 10px;
+}
+
+/* Results */
+.nx-case-results {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 35px;
+}
+
+.nx-result h4 {
+  color: var(--secondary);
+  margin-bottom: 4px;
+}
+
+.nx-result span {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+/*=============================================
+    PORTFOLIO PAGE: PORTFOLIO GRID
+=============================================*/
+.nx-portfolio-grid {
+  overflow: hidden;
+}
+
+/* Flip Card */
+.nx-project-flip {
+  height: 100%;
+  perspective: 1200px;
+}
+
+.nx-project-flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 580px;
+  transform-style: preserve-3d;
+  transition: transform .8s;
+}
+
+.nx-project-flip:hover .nx-project-flip-inner {
+  transform: rotateY(180deg);
+}
+
+/* Front + Back */
+.nx-project-front,
+.nx-project-back {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  overflow: hidden;
+  border-radius: var(--radius-xlg);
+  background: var(--bg-glass);
+  border: 1px solid var(--border);
+}
+
+/* Front */
+.nx-project-front {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Back */
+.nx-project-back {
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  padding: 35px;
+  text-align: center;
+  border-color: var(--border-blue);
+  background:
+    linear-gradient(
+      135deg,
+      var(--bg-dark),
+      var(--overlay-blue-dark)
+    );
+}
+
+/* Image */
+.nx-project-image {
+  overflow: hidden;
+}
+
+.nx-project-image img {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+}
+
+/* Content */
+.nx-project-content {
+  padding: 24px;
+}
+
+/* Services */
+.nx-project-services {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.nx-project-services li {
+  color: var(--text-muted);
+}
+
+/*=============================================
+    BLOG: FEATURED ARTICLE
+=============================================*/
+.nx-featured-post {
+  padding: 40px;
+  border-radius: var(--radius-xlg);
+  background: var(--bg-glass);
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+
+/* Image */
+.nx-featured-post-image {
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+}
+
+.nx-featured-post-image img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+/* Content */
+.nx-featured-post-content h2 {
+  margin: 18px 0;
+}
+
+.nx-featured-post-content p {
+  margin-bottom: 24px;
+}
+
+/* Badge */
+.nx-featured-badge {
+  display: inline-flex;
+  padding: 6px 12px;
+  margin-right: 10px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-light);
+  background: var(--gradient-primary);
+}
+
+/* Category */
+.nx-blog-category {
+  display: inline-flex;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  color: var(--secondary);
+  background: var(--secondary-glow-sm);
+}
+
+/* Meta */
+.nx-blog-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.nx-blog-meta span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.nx-blog-meta svg {
+  width: 16px;
+  height: 16px;
+}
+
+/*=============================================
+    BLOG: GRID
+=============================================*/
+.nx-blog-card {
+  display: block;
+  height: 100%;
+  overflow: hidden;
+  border-radius: var(--radius-xlg);
+  background: var(--bg-glass);
+  border: 1px solid var(--border);
+  transition: var(--transition-slow);
+}
+
+.nx-blog-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--border-blue);
+  box-shadow: var(--shadow-secondary);
+}
+
+/* Image */
+.nx-blog-card-image {
+  overflow: hidden;
+}
+
+.nx-blog-card-image img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  transition: .5s ease;
+}
+
+.nx-blog-card:hover .nx-blog-card-image img {
+  transform: scale(1.05);
+}
+
+/* Content */
+.nx-blog-card-content {
+  padding: 24px;
+}
+
+.nx-blog-card-category {
+  display: inline-flex;
+  padding: 6px 12px;
+  margin-bottom: 14px;
+  border-radius: 999px;
+  background: var(--secondary-glow-sm);
+  color: var(--secondary);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.nx-blog-card-content h3 {
+  margin-bottom: 12px;
+  font-size: var(--fs-h4);
+  line-height: 1.4;
+}
+
+.nx-blog-card-content p {
+  margin-bottom: 20px;
+}
+
+/* Meta */
+.nx-blog-card-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.nx-blog-card-footer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--secondary);
+  font-weight: 500;
+}
+
+.nx-blog-card-footer svg {
+  transition: var(--transition);
+}
+
+.nx-blog-card:hover .nx-blog-card-footer svg {
+  transform: translateX(5px);
+}
+
+/*=============================================
+    BLOG: NEWSLETTER
+=============================================*/
+.nx-newsletter {
+  overflow: hidden;
+}
+
+.nx-newsletter-box {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 60px 40px;
+  text-align: center;
+  border-radius: var(--radius-xlg);
+  background: var(--bg-glass);
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+
+/* Glow */
+.nx-newsletter-box::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  transform: translateX(-50%);
+  background: var(--secondary-glow-lg);
+  filter: blur(120px);
+  opacity: .4;
+  pointer-events: none;
+}
+
+.nx-newsletter-box h2 {
+  margin: 16px 0;
+}
+
+.nx-newsletter-box p {
+  margin: 0 auto 30px;
+}
+
+/* Form */
+.nx-newsletter-form {
+  display: flex;
+  gap: 12px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.nx-newsletter-form input {
+  flex: 1;
+  padding: 14px 18px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: var(--bg-soft);
+  color: var(--text);
+  outline: none;
+}
+
+.nx-newsletter-form input:focus {
+  border-color: var(--border-blue);
+}
+
+.nx-newsletter-form button {
+  flex-shrink: 0;
+}
+
+/*=============================================
+     CONATCT PAGE: CONTACT SECTION
+=============================================*/
+.nx-contact-info h2 {
+  margin: 16px 0;
+}
+
+.nx-contact-info p {
+  margin-bottom: 30px;
+}
+
+/* Info Item */
+.nx-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.nx-contact-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  background: var(--secondary-glow-sm);
+  color: var(--secondary);
+  flex-shrink: 0;
+}
+
+.nx-contact-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.nx-contact-item h4 {
+  margin-bottom: 6px;
+}
+
+/* Form */
+.nx-contact-form {
+  padding: 32px;
+  border-radius: var(--radius-xlg);
+  background: var(--bg-glass);
+  border: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+
+.nx-contact-form::before {
+  content: "";
+  position: absolute;
+  top: -120px;
+  right: -120px;
+  width: 250px;
+  height: 250px;
+  background: var(--secondary-glow-lg);
+  filter: blur(120px);
+  opacity: .3;
+  pointer-events: none;
+}
+
+.nx-contact-form input,
+.nx-contact-form select,
+.nx-contact-form textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: var(--bg-soft);
+  color: var(--text);
+  outline: none;
+  transition: var(--transition);
+}
+
+.nx-contact-form input:focus,
+.nx-contact-form select:focus,
+.nx-contact-form textarea:focus {
+  border-color: var(--border-blue);
+}
+
+.nx-contact-form select option {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.nx-contact-form textarea {
+  resize: vertical;
+}
+
+/*=============================================
+     CONATCT PAGE: MAP
+=============================================*/
+.nx-map-wrapper {
+  overflow: hidden;
+  border-radius: var(--radius-xlg);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-primary);
+}
+
+.nx-map-wrapper iframe {
+  width: 100%;
+  height: 500px;
+  border: 0;
+  display: block;
 }
